@@ -1,0 +1,51 @@
+@mixin menu-title () {
+    font-size:1.4em;
+    font-weight: 550;
+    letter-spacing: 0.1em;
+    color: $primary;
+    text-transform: uppercase;
+    text-align: center;
+}
+@mixin section($color){
+    font-size: 0.8em;
+    font-weight: 300;
+    color: $white;
+    background-color: $color;
+}
+
+@mixin menu-title--hover() {
+font-size: 1.6em;
+background-color: transparentize($secondary, 0.95); 
+border: 5px solid $primary;
+}
+
+@mixin logo() {
+    width: 30px;
+    height: 30px;
+}
+
+@mixin line() {
+    align-items: flex-start;
+    border-top: 2px solid $primary;
+    width: 100%;
+    height: 50%;
+}
+@mixin circle-left () {
+    position: relative;
+    border-radius: 50%;
+    width: 100px; 
+    height: 50px;
+    background: white;
+    border-top-left-radius: 100%; // 4*height
+    border-top-right-radius: 0%; // 4*height
+}
+@mixin circle-right () {
+    position: relative;
+    border-radius: 50%;
+    width: 100px; 
+    height: 50px;
+    background: white;
+    border-top-left-radius: 0%; // 4*height
+    border-top-right-radius: 100%; // 4*height
+}
+

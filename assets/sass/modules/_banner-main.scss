@@ -1,0 +1,75 @@
+@mixin banner-main ($banner) {
+    background-image:$banner;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: auto;
+    height: 200px;
+    border-radius: 0 0 0 40%;
+}
+@mixin button-menu ($color) {
+    position: absolute;
+    text-align: center;
+    top: 5px;
+    left: 5px;
+    color: $color;
+    background-color: $primary;
+    font-size: 3em;
+    z-index: 100;
+}
+@mixin button-menu--hover() {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 100;
+    color:$secondary;
+}
+@mixin circle-header {
+    position: absolute;
+    top: 90%;
+    left:33%;
+    border-radius: 50%;
+    width: 34%;
+    height: 100%;
+    background-color: white;
+    content:"";
+}
+
+@mixin circle-footer-left {
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    /* top: 40px;
+    border-radius: 50%;
+    border-top: 100px solid $primary;
+    color: $white;
+    background-color: $primary;
+    content:"";
+} */
+    height: 60px;
+   // 2*height
+    background: $primary;
+    color:$white;
+    border-top-left-radius: 100%; // 4*height
+    border-top-right-radius: 0%; // 4*height
+    margin:0;
+    padding:0;
+}
+@mixin circle-footer-right {
+    
+    position: relative;
+    /* top: 40px;
+    border-radius: 50%;
+    border-top: 100px solid $primary;
+    color: $white;
+    background-color: $primary;
+    content:"";
+} */
+    height: 60px;
+   // 2*height
+    background: $primary;
+    color:$white;
+    border-top-left-radius: 0%; // 4*height
+    border-top-right-radius: 100%; // 4*height
+    margin:0;
+    padding:0;
+}

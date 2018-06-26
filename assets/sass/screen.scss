@@ -1,0 +1,82 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+@import "compass/reset";
+@import "theme/color";
+@import "base/body";
+@import "modules/banner-main";
+@import "modules/menu";
+@font-face {
+    font-family: "Segoe";
+    src: url("../sass/theme/Segoe\ UI.ttf") format("ttf");
+}
+
+/* Reprendre l'architecture du BEM ici:*/
+body {
+    @include body--color($white);
+}
+.banner-main {
+    @include banner-main($banner);
+}
+.banner-main--hide {
+    display:none;
+}
+.fa-align-left {
+    @include button-menu($white);
+}
+.fa-align-left:hover {
+    @include button-menu--hover();
+}
+.circle {
+    @include circle-header();
+}
+.button {
+    justify-content: center;
+}
+.menu-title {
+    @include menu-title();
+}
+.menu:hover {
+    @include menu-title--hover();
+}
+
+.line {
+    @include line();
+}
+.show {
+    display: contents;
+}
+.hide {
+    display: none;
+  } 
+.section-left {
+        @include section($secondary);
+       /*  @include circle-left(); */
+    }
+.section-right {
+        @include section($primary);
+      /*   @include circle-right(); */
+    }
+.circle-footer {
+
+    justify-content: center;
+    align-items: center;
+    color: $white;
+    padding:0;
+}
+.circle-footer-left {
+@include circle-footer-left();
+}
+.circle-footer-right {
+    @include circle-footer-right();
+}
+.line-left
+.line-right
+.box-logo
+.row--blue {
+    @include box--color($primary, $white)
+}
+.row--red {
+    @include box--color($secondary, $white)
+}

@@ -1,0 +1,13 @@
+/*Body de base avec choix couleur*/
+
+@mixin body--color($color) {
+        width: 100%;
+        margin: 0 auto 0 auto;
+        /* background-color: $color; */
+        color: $primary;
+        font-family: 'Segoe', Tahoma, Geneva, Verdana, sans-serif;
+}
+@mixin box--color($bg-color, $color) {
+    background-color: $bg-color;
+    color: $color;
+}
