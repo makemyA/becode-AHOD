@@ -1,0 +1,24 @@
+@mixin section-title($color,$bg-color){
+    font-size: 1.5em;
+    font-weight: 700;
+    color: $color;
+    background-color: $bg-color;
+    text-align: center;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+@mixin section($color,$bg-color){
+    font-size: 1em;
+    line-height: 2em;
+    font-weight: 300;
+    color: $color;
+    background-color: $bg-color;
+}
+@mixin border-left($color){
+    border-left: 2px solid $color;
+    padding: 0 2em 0 2em;
+}
+@mixin border-right($color){
+    border-right: 2px solid $color;
+    padding: 0 2em 0 2em;
+}

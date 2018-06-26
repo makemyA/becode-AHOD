@@ -37,7 +37,7 @@ function returnMenu() {
     banner.classList.add("hide");
     button.forEach(functionHide);
     buttonInfos.classList.remove("hide");
-    menuAgenda.classList.remove("hide");
+    menuInfos.classList.remove("hide");
  }
  function clickAgenda(){
     banner.classList.add("hide");
@@ -50,6 +50,7 @@ function returnMenu() {
     button.forEach(functionHide);
     buttonContact.classList.remove("hide");
     menuContact.classList.remove("hide");
+
  }
  function clickAskUs(){
     banner.classList.add("hide");

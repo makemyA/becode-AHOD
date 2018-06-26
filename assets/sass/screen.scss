@@ -7,6 +7,7 @@
 @import "base/body";
 @import "modules/banner-main";
 @import "modules/menu";
+@import "layout/infos";
 @font-face {
     font-family: "Segoe";
     src: url("../sass/theme/Segoe\ UI.ttf") format("ttf");
@@ -16,6 +17,13 @@
 body {
     @include body--color($white);
 }
+strong {
+    color:$primary;
+    font-weight: 700;
+}
+.hide {
+    display: none;
+  } 
 .banner-main {
     @include banner-main($banner);
 }
@@ -34,36 +42,50 @@ body {
 .button {
     justify-content: center;
 }
+.button:hover {
+    @include button--hover();
+}
 .menu-title {
     @include menu-title();
 }
-.menu:hover {
-    @include menu-title--hover();
-}
-
 .line {
     @include line();
 }
-.show {
-    display: contents;
+.section-title{
+    @include section-title($white,$primary);
 }
-.hide {
-    display: none;
-  } 
-.section-left {
-        @include section($secondary);
+.section--bg-color-secondary {
+        @include section($white,$secondary);
        /*  @include circle-left(); */
     }
-.section-right {
-        @include section($primary);
+.section--bg-color-primary {
+        @include section($white,$primary);
       /*   @include circle-right(); */
     }
+.section--color-secondary {
+        @include section($secondary,$white);
+}
+.section--color-primary {
+        @include section($primary,$white);
+}
+.border-left--secondary {
+    @include border-left($secondary);
+}
+.border-left--primary {
+    @include border-left($primary);
+}
+.border-right--secondary {
+    @include border-right($secondary);
+}
+.border-right--primary {
+    @include border-right($primary);
+}
 .circle-footer {
 
-    justify-content: center;
-    align-items: center;
-    color: $white;
-    padding:0;
+justify-content: center;
+align-items: center;
+color: $white;
+padding:0;
 }
 .circle-footer-left {
 @include circle-footer-left();

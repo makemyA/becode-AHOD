@@ -6,17 +6,14 @@
     text-transform: uppercase;
     text-align: center;
 }
-@mixin section($color){
-    font-size: 0.8em;
-    font-weight: 300;
-    color: $white;
-    background-color: $color;
-}
 
-@mixin menu-title--hover() {
-font-size: 1.6em;
-background-color: transparentize($secondary, 0.95); 
-border: 5px solid $primary;
+
+
+
+@mixin button--hover() {
+
+background-color: transparentize($secondary, 0.85); 
+border: 1px solid $primary;
 }
 
 @mixin logo() {
