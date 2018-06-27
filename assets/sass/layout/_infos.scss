@@ -1,5 +1,6 @@
-@mixin section-title($color,$bg-color){
-    font-size: 1.5em;
+/* $color $bg-color $font */
+@mixin section-title($color,$bg-color,$font){
+    font-size: $font;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.4em;
@@ -9,17 +10,20 @@
     padding: 1em;
     margin-bottom: 1em;
 }
-@mixin card-section-title($color,$bg-color){
-    font-size: 1em;
+/* $color $bg-color $font */
+@mixin card-section-title($color,$bg-color,$font){
+    font-size: $font;
     font-weight:500;
     text-transform: uppercase;
     color: $color;
     background-color: $bg-color;
     text-align: center;
     letter-spacing: 0.3em;
+    line-height: 1.2em;
 }
-@mixin card-menu($color,$bg-color){
-    font-size: 0.7em;
+/* $color $bg-color $font */
+@mixin card-menu($color,$bg-color,$font){
+    font-size: $font;
     font-weight:500;
     text-transform: uppercase;
     background-color: $bg-color;
@@ -32,6 +36,7 @@
     letter-spacing: 0.1em;
    
 }
+/* $color $bg-color $font */
 @mixin card-text($color,$bg-color,$font){
     font-size: $font;
     color: $color;
@@ -42,24 +47,34 @@
 
 }
 @mixin card-button(){
-    background-color: $secondary;
-    color: $white;
+    background-color: $white;
+    color: $primary;
+    border: none;
+    transition: all 0.3s ease 0s;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    cursor: pointer;
+    border-radius: 45px;
 }
-@mixin section($color,$bg-color){
-    font-size: 0.8em;
+/* $color $bg-color $font */
+@mixin section($color,$bg-color,$font){
+    font-size: $font;
     line-height: 2em;
     font-weight: 500;
     color: $color;
-    background-color: $bg-color;
+    background-color:$bg-color;
 }
-@mixin border-left($color){
+/* $color $font */
+@mixin border-left($color,$font){
     border-left: 2px solid $color;
     padding: 0 2em 0 2em;
     text-align: left;
+    font-size: $font;
 }
-@mixin border-right($color){
+/* $color $bg-color $font */
+@mixin border-right($color,$font){
     border-right: 2px solid $color;
     padding: 0 2em 0 2em;
     text-align: right;
+    font-size: $font;
 }
 

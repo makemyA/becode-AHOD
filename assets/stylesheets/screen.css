@@ -2,7 +2,6 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 5, ../../../../../../Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -24,45 +23,37 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../../Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../../Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../../Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../../Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../../Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../../Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../../Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../../Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
@@ -70,12 +61,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* $primary: #1E233E;
 $secondary: #D7293A; */
 /*Body de base avec choix couleur*/
+/* $color $bg-color $font */
+/* $color $bg-color $font */
+/* $color $bg-color $font */
+/* $color $bg-color $font */
+/* $color $bg-color $font */
+/* $color $font */
+/* $color $bg-color $font */
 @font-face {
   font-family: "Segoe";
   src: url("../sass/theme/Segoe UI.ttf") format("ttf");
 }
 /* Reprendre l'architecture du BEM ici:*/
-/* line 18, ../sass/screen.scss */
 body {
   width: 100%;
   margin: 0 auto 0 auto;
@@ -84,18 +81,15 @@ body {
   font-family: 'Segoe', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* line 21, ../sass/screen.scss */
 strong {
   color: #D7293A;
   font-weight: 700;
 }
 
-/* line 25, ../sass/screen.scss */
 .hide {
   display: none;
 }
 
-/* line 28, ../sass/screen.scss */
 .banner-main {
   background-image: url("../img/banner-phone--red.png");
   background-repeat: no-repeat;
@@ -105,12 +99,10 @@ strong {
   border-radius: 0 0 0 40%;
 }
 
-/* line 31, ../sass/screen.scss */
 .banner-main--hide {
   display: none;
 }
 
-/* line 34, ../sass/screen.scss */
 .fa-align-left {
   position: absolute;
   text-align: center;
@@ -122,7 +114,6 @@ strong {
   z-index: 100;
 }
 
-/* line 37, ../sass/screen.scss */
 .fa-align-left:hover {
   position: absolute;
   top: 5px;
@@ -131,7 +122,6 @@ strong {
   color: #1E233E;
 }
 
-/* line 40, ../sass/screen.scss */
 .circle {
   position: absolute;
   top: 90%;
@@ -143,18 +133,15 @@ strong {
   content: "";
 }
 
-/* line 43, ../sass/screen.scss */
 .button {
   justify-content: center;
 }
 
-/* line 46, ../sass/screen.scss */
 .button:hover {
   background-color: rgba(30, 35, 62, 0.15);
   border: 1px solid #D7293A;
 }
 
-/* line 49, ../sass/screen.scss */
 .menu-title {
   font-size: 1.4em;
   font-weight: 550;
@@ -164,7 +151,6 @@ strong {
   text-align: center;
 }
 
-/* line 52, ../sass/screen.scss */
 .line {
   align-items: flex-start;
   border-top: 2px solid #D7293A;
@@ -172,7 +158,6 @@ strong {
   height: 50%;
 }
 
-/* line 55, ../sass/screen.scss */
 .section-title {
   font-size: 1.5em;
   font-weight: 500;
@@ -185,9 +170,8 @@ strong {
   margin-bottom: 1em;
 }
 
-/* line 58, ../sass/screen.scss */
 .section--bg-color-secondary {
-  font-size: 0.8em;
+  font-size: 1em;
   line-height: 2em;
   font-weight: 500;
   color: #FFFFFF;
@@ -195,9 +179,8 @@ strong {
   /*  @include circle-left(); */
 }
 
-/* line 62, ../sass/screen.scss */
 .section--bg-color-primary {
-  font-size: 0.8em;
+  font-size: 1em;
   line-height: 2em;
   font-weight: 500;
   color: #FFFFFF;
@@ -205,53 +188,51 @@ strong {
   /*   @include circle-right(); */
 }
 
-/* line 66, ../sass/screen.scss */
 .section--color-secondary {
-  font-size: 0.8em;
+  font-size: 1em;
   line-height: 2em;
   font-weight: 500;
   color: #1E233E;
   background-color: #FFFFFF;
 }
 
-/* line 69, ../sass/screen.scss */
 .section--color-primary {
-  font-size: 0.8em;
+  /* $color $bg-color $font */
+  font-size: 1em;
   line-height: 2em;
   font-weight: 500;
   color: #D7293A;
   background-color: #FFFFFF;
 }
 
-/* line 72, ../sass/screen.scss */
 .border-left--secondary {
   border-left: 2px solid #1E233E;
   padding: 0 2em 0 2em;
   text-align: left;
+  font-size: 1em;
 }
 
-/* line 75, ../sass/screen.scss */
 .border-left--primary {
   border-left: 2px solid #D7293A;
   padding: 0 2em 0 2em;
   text-align: left;
+  font-size: 1em;
 }
 
-/* line 78, ../sass/screen.scss */
 .border-right--secondary {
   border-right: 2px solid #1E233E;
   padding: 0 2em 0 2em;
   text-align: right;
+  font-size: 1em;
 }
 
-/* line 81, ../sass/screen.scss */
 .border-right--primary {
   border-right: 2px solid #D7293A;
   padding: 0 2em 0 2em;
   text-align: right;
+  font-size: 1em;
 }
 
-/* line 84, ../sass/screen.scss */
 .card-title {
   font-size: 1em;
   font-weight: 500;
@@ -260,11 +241,11 @@ strong {
   background-color: #FFFFFF;
   text-align: center;
   letter-spacing: 0.3em;
+  line-height: 1.2em;
 }
 
-/* line 87, ../sass/screen.scss */
 .card-menu {
-  font-size: 0.7em;
+  font-size: 0.6em;
   font-weight: 500;
   text-transform: uppercase;
   background-color: #D7293A;
@@ -277,41 +258,47 @@ strong {
   letter-spacing: 0.1em;
 }
 
-/* line 90, ../sass/screen.scss */
 .card-text {
-  font-size: 0.7em;
-  color: #1E233E;
+  font-size: 0.8em;
+  color: #D7293A;
   background-color: #FFFFFF;
   text-align: left;
   padding: 0.4em;
   margin: 0.2em 0 0.2em 0;
 }
 
-/* line 93, ../sass/screen.scss */
 .card-section {
   font-size: 0.8em;
   line-height: 2em;
   font-weight: 500;
   color: #1E233E;
   background-color: #FFFFFF;
+  opacity: 0.95;
 }
 
-/* line 96, ../sass/screen.scss */
 .card-img-top {
   transform: scale(1);
   width: 100%;
   height: 200px;
 }
 
-/* line 101, ../sass/screen.scss */
 .btn {
-  background-color: #1E233E;
-  color: #FFFFFF;
+  background-color: #FFFFFF;
+  color: #D7293A;
+  border: none;
+  transition: all 0.3s ease 0s;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  border-radius: 45px;
   text-align: center;
   border: none;
 }
 
-/* line 106, ../sass/screen.scss */
+.btn:hover {
+  background-color: #1E233E;
+  opacity: 0.9;
+}
+
 .circle-footer {
   justify-content: center;
   align-items: center;
@@ -319,7 +306,6 @@ strong {
   padding: 0;
 }
 
-/* line 112, ../sass/screen.scss */
 .circle-footer-left {
   justify-content: flex-end;
   align-items: center;
@@ -340,7 +326,6 @@ strong {
   padding: 0;
 }
 
-/* line 115, ../sass/screen.scss */
 .circle-footer-right {
   position: relative;
     /* top: 40px;
@@ -359,7 +344,6 @@ strong {
   padding: 0;
 }
 
-/* line 118, ../sass/screen.scss */
 .line-left
 .line-right
 .box-logo
@@ -368,7 +352,6 @@ strong {
   color: #FFFFFF;
 }
 
-/* line 124, ../sass/screen.scss */
 .row--red {
   background-color: #1E233E;
   color: #FFFFFF;
