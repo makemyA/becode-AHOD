@@ -175,7 +175,8 @@ strong {
 /* line 54, ../sass/screen.scss */
 .section-title {
   font-size: 1.5em;
-  font-weight: 700;
+  font-weight: 500;
+  text-transform: uppercase;
   color: #FFFFFF;
   background-color: #D7293A;
   text-align: center;
@@ -225,27 +226,42 @@ strong {
 .border-left--secondary {
   border-left: 2px solid #1E233E;
   padding: 0 2em 0 2em;
+  text-align: left;
 }
 
 /* line 74, ../sass/screen.scss */
 .border-left--primary {
   border-left: 2px solid #D7293A;
   padding: 0 2em 0 2em;
+  text-align: left;
 }
 
 /* line 77, ../sass/screen.scss */
 .border-right--secondary {
   border-right: 2px solid #1E233E;
   padding: 0 2em 0 2em;
+  text-align: right;
 }
 
 /* line 80, ../sass/screen.scss */
 .border-right--primary {
   border-right: 2px solid #D7293A;
   padding: 0 2em 0 2em;
+  text-align: right;
 }
 
 /* line 83, ../sass/screen.scss */
+.card-menu {
+  font-size: 0.8em;
+  font-weight: 500;
+  text-transform: uppercase;
+  background-color: #D7293A;
+  color: #FFFFFF;
+  padding: 0.4em;
+  margin: 0.5em 0 0.5em 0;
+}
+
+/* line 86, ../sass/screen.scss */
 .circle-footer {
   justify-content: center;
   align-items: center;
@@ -253,7 +269,7 @@ strong {
   padding: 0;
 }
 
-/* line 90, ../sass/screen.scss */
+/* line 92, ../sass/screen.scss */
 .circle-footer-left {
   justify-content: flex-end;
   align-items: center;
@@ -274,7 +290,7 @@ strong {
   padding: 0;
 }
 
-/* line 93, ../sass/screen.scss */
+/* line 95, ../sass/screen.scss */
 .circle-footer-right {
   position: relative;
     /* top: 40px;
@@ -293,7 +309,7 @@ strong {
   padding: 0;
 }
 
-/* line 96, ../sass/screen.scss */
+/* line 98, ../sass/screen.scss */
 .line-left
 .line-right
 .box-logo
@@ -302,7 +318,7 @@ strong {
   color: #FFFFFF;
 }
 
-/* line 102, ../sass/screen.scss */
+/* line 104, ../sass/screen.scss */
 .row--red {
   background-color: #1E233E;
   color: #FFFFFF;

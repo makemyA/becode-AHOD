@@ -80,8 +80,10 @@ strong {
 .border-right--primary {
     @include border-right($primary);
 }
+.card-menu {
+    @include card-menu($white,$primary);
+}
 .circle-footer {
-
 justify-content: center;
 align-items: center;
 color: $white;
