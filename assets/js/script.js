@@ -14,12 +14,30 @@
  let menuContact= document.getElementById("menu-contact");
  let buttonAskUs = document.getElementById("button-ask-us");
  let menuAskUs= document.getElementById("menu-ask-us");
- buttonAgenda.addEventListener("click", clickAgenda);
+ let agendaCards= document.querySelectorAll(".agenda-card");
+ let agendaCard1= document.getElementById("agenda-card-1");
+ let agendaCard2= document.getElementById("agenda-card-2");
+ let buttonAgendaCard1= document.getElementById("button-agenda-1");
+ let buttonAgendaCard2= document.getElementById("button-agenda-2");
+
+ buttonAgenda.addEventListener("click", clickAgenda); 
  buttonMenu.addEventListener("click", returnMenu);
  buttonInfos.addEventListener("click", clickInfos);
  buttonContact.addEventListener("click",clickContact);
  buttonAskUs.addEventListener("click",clickAskUs);
  button.forEach(functionShow);
+ buttonAgendaCard1.addEventListener("click",clickCard1);
+ buttonAgendaCard2.addEventListener("click",clickCard2);
+ function clickCard1(){
+     agendaCard1.classList.toggle("hide");
+     /* banner.classList.add("hide");
+     button.forEach(functionHide);
+     buttonInfos.classList.remove("hide");
+     menuAgenda.classList.remove("hide"); */
+ }
+ function clickCard2(){
+    agendaCard2.classList.toggle("hide");
+ }
  function functionShow(item, index, array){
      item=item.classList.remove("hide");
  }
@@ -44,13 +62,14 @@ function returnMenu() {
     button.forEach(functionHide);
     buttonAgenda.classList.remove("hide");
     menuAgenda.classList.remove("hide");
+    agendaCards.forEach(functionHide); 
+   
  }
  function clickContact(){
     banner.classList.add("hide");
     button.forEach(functionHide);
     buttonContact.classList.remove("hide");
     menuContact.classList.remove("hide");
-
  }
  function clickAskUs(){
     banner.classList.add("hide");

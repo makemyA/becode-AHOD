@@ -89,7 +89,7 @@ strong {
     @include card-menu($white,$primary,$font-text3);
 }
 .card-text {
-    @include card-text($primary,$white,$font-text2);
+    @include card-text($primary,$white,$font-text3);
 }
 .card-section {
     @include section($secondary,$white,$font-text2);
@@ -98,7 +98,8 @@ strong {
 .card-img-top {
     transform: scale(1);
     width: 100%;
-    height: 200px;
+    height: auto;
+   
 }
 .btn {
    @include card-button();
@@ -108,6 +109,9 @@ strong {
 .btn:hover{
     background-color: $secondary;
     opacity:0.9;
+}
+.agenda-card {
+color: green;
 }
 .circle-footer {
 justify-content: center;

@@ -14,6 +14,7 @@
     color: $color;
     background-color: $primary;
     font-size: 3em;
+    max-width: 50px;
     z-index: 100;
 }
 @mixin button-menu--hover() {
@@ -72,4 +73,8 @@
     border-top-right-radius: 100%; // 4*height
     margin:0;
     padding:0;
+}
+@mixin copyright(){
+    text-transform: capitalize;
+    font-size: 0.6em;
 }

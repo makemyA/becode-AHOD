@@ -5,16 +5,32 @@
     color: $primary;
     text-transform: uppercase;
     text-align: center;
+    cursor: pointer;
 }
-
 
 
 
 @mixin button--hover() {
 
-background-color: transparentize($secondary, 0.85); 
-border: 1px solid $primary;
+/* background-color: transparentize($secondary, 0.90);  */
+transition: all 0.3s ease 0s;
+
+opacity: 0.9;
+background-color: $secondary;
+color:$white;
+& .menu-title, .line {
+    color:white;
+    opacity: 0.8;
+    border-color: white;
+     transition: all 0.3s ease 0s;
 }
+& .logo {
+    opacity:0.2;
+  /*   transition: all 0.3s ease 0s; */
+    border-radius: 50%;
+}
+} 
+
 
 @mixin logo() {
     width: 30px;

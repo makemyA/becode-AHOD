@@ -28,12 +28,17 @@
     text-transform: uppercase;
     background-color: $bg-color;
     color:$color;
-    padding: 0.4em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 0.1em;
+    padding-right: 0.1em;
     margin: 0.5em 0 0.5em 0;
     text-align: center;
     align-self: center;
     overflow: hidden;
     letter-spacing: 0.1em;
+     box-shadow: 0 8px 15px rgba(0,0,0,0.1); 
+     max-width: 110px;
    
 }
 /* $color $bg-color $font */
