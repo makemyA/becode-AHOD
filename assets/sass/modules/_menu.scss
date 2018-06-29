@@ -8,14 +8,16 @@
     cursor: pointer;
 }
 
-
+@mixin button (){
+    
+}
 
 @mixin button--hover() {
 
 /* background-color: transparentize($secondary, 0.90);  */
 transition: all 0.3s ease 0s;
 
-opacity: 0.9;
+opacity: 0.8;
 background-color: $secondary;
 color:$white;
 & .menu-title, .line {
@@ -25,7 +27,7 @@ color:$white;
      transition: all 0.3s ease 0s;
 }
 & .logo {
-    opacity:0.2;
+    opacity:0.8;
   /*   transition: all 0.3s ease 0s; */
     border-radius: 50%;
 }

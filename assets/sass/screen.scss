@@ -9,6 +9,7 @@
 @import "modules/menu";
 @import "layout/infos";
 @import "theme/font";
+@import "state/tablet";
 @font-face {
     font-family: "Segoe";
     src: url("../sass/theme/Segoe\ UI.ttf") format("ttf");
@@ -21,6 +22,16 @@ body {
 strong {
     color:$primary;
     font-weight: 700;
+}
+.container-fluid {
+    width:100%;
+    margin: 0 auto 0 auto;
+    padding: 0;
+}
+.row {
+    width:100%;
+    margin: 0 auto 0 auto;
+    padding: 0;
 }
 .hide {
     display: none;
@@ -109,6 +120,21 @@ strong {
 .btn:hover{
     background-color: $secondary;
     opacity:0.9;
+}
+.carousel-control-prev {
+/*    position: relative;
+   top: 0px; */
+   background-color: $secondary;
+   opacity: 0.4;
+   z-index: 500;
+   height: 3em;;
+}
+.carousel-control-next {
+    background-color: $primary;
+    opacity: 0.4;
+    z-index: 500;
+    height: 3em;;
+
 }
 .agenda-card {
 color: green;

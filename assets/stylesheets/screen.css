@@ -68,6 +68,12 @@ $secondary: #D7293A; */
 /* $color $bg-color $font */
 /* $color $font */
 /* $color $bg-color $font */
+@media only all and (min-width: 576px) {
+  body {
+    width: 80%;
+    margin: 0 auto 0 auto;
+  }
+}
 @font-face {
   font-family: "Segoe";
   src: url("../sass/theme/Segoe UI.ttf") format("ttf");
@@ -84,6 +90,18 @@ body {
 strong {
   color: #D7293A;
   font-weight: 700;
+}
+
+.container-fluid {
+  width: 100%;
+  margin: 0 auto 0 auto;
+  padding: 0;
+}
+
+.row {
+  width: 100%;
+  margin: 0 auto 0 auto;
+  padding: 0;
 }
 
 .hide {
@@ -121,6 +139,7 @@ strong {
   left: 5px;
   z-index: 100;
   color: #1E233E;
+  opacity: 0.8;
 }
 
 .circle {
@@ -141,7 +160,7 @@ strong {
 .button:hover {
   /* background-color: transparentize($secondary, 0.90);  */
   transition: all 0.3s ease 0s;
-  opacity: 0.9;
+  opacity: 0.8;
   background-color: #1E233E;
   color: #FFFFFF;
 }
@@ -152,7 +171,7 @@ strong {
   transition: all 0.3s ease 0s;
 }
 .button:hover .logo {
-  opacity: 0.2;
+  opacity: 0.8;
   /*   transition: all 0.3s ease 0s; */
   border-radius: 50%;
 }
@@ -318,6 +337,22 @@ strong {
 .btn:hover {
   background-color: #1E233E;
   opacity: 0.9;
+}
+
+.carousel-control-prev {
+  /*    position: relative;
+     top: 0px; */
+  background-color: #1E233E;
+  opacity: 0.4;
+  z-index: 500;
+  height: 3em;
+}
+
+.carousel-control-next {
+  background-color: #D7293A;
+  opacity: 0.4;
+  z-index: 500;
+  height: 3em;
 }
 
 .agenda-card {
