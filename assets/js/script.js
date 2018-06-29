@@ -17,8 +17,13 @@
  let agendaCards= document.querySelectorAll(".agenda-card");
  let agendaCard1= document.getElementById("agenda-card-1");
  let agendaCard2= document.getElementById("agenda-card-2");
+ let agendaCard3= document.getElementById("agenda-card-3");
+ let agendaCard4= document.getElementById("agenda-card-4");
  let buttonAgendaCard1= document.getElementById("button-agenda-1");
  let buttonAgendaCard2= document.getElementById("button-agenda-2");
+ let buttonAgendaCard3= document.getElementById("button-agenda-3");
+ let buttonAgendaCard4= document.getElementById("button-agenda-4");
+
 
  buttonAgenda.addEventListener("click", clickAgenda); 
  buttonMenu.addEventListener("click", returnMenu);
@@ -28,6 +33,9 @@
  button.forEach(functionShow);
  buttonAgendaCard1.addEventListener("click",clickCard1);
  buttonAgendaCard2.addEventListener("click",clickCard2);
+ buttonAgendaCard3.addEventListener("click",clickCard3);
+ buttonAgendaCard4.addEventListener("click",clickCard4);
+
  function clickCard1(){
      agendaCard1.classList.toggle("hide");
      /* banner.classList.add("hide");
@@ -37,6 +45,12 @@
  }
  function clickCard2(){
     agendaCard2.classList.toggle("hide");
+ }
+ function clickCard3(){
+    agendaCard3.classList.toggle("hide");
+ }
+ function clickCard4(){
+    agendaCard4.classList.toggle("hide");
  }
  function functionShow(item, index, array){
      item=item.classList.remove("hide");

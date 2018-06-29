@@ -9,11 +9,15 @@
 @import "modules/menu";
 @import "layout/infos";
 @import "theme/font";
-@import "state/tablet";
 @font-face {
     font-family: "Segoe";
     src: url("../sass/theme/Segoe\ UI.ttf") format("ttf");
 }
+
+@media only all and (min-width: 576px) {
+    @import "state/576up";
+}
+
 
 /* Reprendre l'architecture du BEM ici:*/
 body {
@@ -37,7 +41,7 @@ strong {
     display: none;
   } 
 .banner-main {
-    @include banner-main($banner);
+    @include banner-main($banner-small);
 }
 .banner-main--hide {
     display:none;
@@ -52,10 +56,14 @@ strong {
     @include circle-header();
 }
 .button {
-    justify-content: center;
+  text-align: center;
 }
 .button:hover {
     @include button--hover();
+}
+img.logo {
+    @include logo();
+
 }
 .menu-title {
     @include menu-title();
@@ -153,7 +161,12 @@ padding:0;
 }
 .line-left
 .line-right
-.box-logo
+.box-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 .row--blue {
     @include box--color($primary, $white)
 }
