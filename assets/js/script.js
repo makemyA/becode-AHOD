@@ -1,4 +1,4 @@
-
+ const mq = window.matchMedia(("min-width:576px"));
  
  let menu= document.getElementsByClassName("menu");
  let hide = document.querySelectorAll(".hide");
@@ -65,6 +65,11 @@ function returnMenu() {
     
  }
   /*Fonctions*/
+  if (mq.matches){
+    // window width is at least 500px
+     }else{
+     // window width is less than 500px
+     }
  function clickInfos() {
     banner.classList.add("hide");
     button.forEach(functionHide);
