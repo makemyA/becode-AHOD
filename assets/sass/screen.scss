@@ -56,11 +56,14 @@ strong {
     @include circle-header();
 }
 .button {
-  text-align: center;
+    text-align: center;
+    color: $primary;
+  
 }
-.button:hover {
-    @include button--hover();
+.button:hover{
+    @include button--hover(true);
 }
+
 img.logo {
     @include logo();
 

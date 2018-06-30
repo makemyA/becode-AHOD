@@ -1,11 +1,34 @@
 
     body {
+        display: flex;
+        justify-content: center;
         width: 80%;
-        margin: 0 auto 0 auto;
+        margin: 0 10% 0 10%;
         
     }
     #banner-main {
         @include banner-main($banner-medium);
-        
+        height: 300px;
+        &.hide {
+            display:flex;
+        }
     }
-    
+    .section, .button {
+    &.hide {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+#button-infos:hover{
+    @include button--hover(false);
+}
+#button-agenda:hover{
+    @include button--hover(false);
+}
+#button-contact:hover{
+    @include button--hover(false);
+}
+#button-ask-us:hover{
+    @include button--hover(false);
+}

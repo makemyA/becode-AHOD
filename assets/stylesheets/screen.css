@@ -74,8 +74,10 @@ $secondary: #D7293A; */
 }
 @media only all and (min-width: 576px) {
   body {
+    display: flex;
+    justify-content: center;
     width: 80%;
-    margin: 0 auto 0 auto;
+    margin: 0 10% 0 10%;
   }
 
   #banner-main {
@@ -85,6 +87,87 @@ $secondary: #D7293A; */
     width: auto;
     height: 200px;
     border-radius: 0 0 0 40%;
+    height: 300px;
+  }
+  #banner-main.hide {
+    display: flex;
+  }
+
+  .section.hide, .button.hide {
+    display: flex;
+    justify-content: center;
+  }
+
+  #button-infos:hover {
+    transition: all 0.3s ease 0s;
+    opacity: 1;
+    background-color: white;
+    color: #D7293A;
+  }
+  #button-infos:hover .menu-title, #button-infos:hover .line {
+    color: #D7293A;
+    opacity: 1;
+    border-color: #D7293A;
+    transition: all 0.3s ease 0s;
+  }
+  #button-infos:hover .logo {
+    opacity: 1;
+    /*   transition: all 0.3s ease 0s; */
+    border-radius: 50%;
+  }
+
+  #button-agenda:hover {
+    transition: all 0.3s ease 0s;
+    opacity: 1;
+    background-color: white;
+    color: #D7293A;
+  }
+  #button-agenda:hover .menu-title, #button-agenda:hover .line {
+    color: #D7293A;
+    opacity: 1;
+    border-color: #D7293A;
+    transition: all 0.3s ease 0s;
+  }
+  #button-agenda:hover .logo {
+    opacity: 1;
+    /*   transition: all 0.3s ease 0s; */
+    border-radius: 50%;
+  }
+
+  #button-contact:hover {
+    transition: all 0.3s ease 0s;
+    opacity: 1;
+    background-color: white;
+    color: #D7293A;
+  }
+  #button-contact:hover .menu-title, #button-contact:hover .line {
+    color: #D7293A;
+    opacity: 1;
+    border-color: #D7293A;
+    transition: all 0.3s ease 0s;
+  }
+  #button-contact:hover .logo {
+    opacity: 1;
+    /*   transition: all 0.3s ease 0s; */
+    border-radius: 50%;
+  }
+
+  #button-ask-us:hover {
+    transition: all 0.3s ease 0s;
+    opacity: 1;
+    background-color: white;
+    color: #D7293A;
+  }
+  #button-ask-us:hover .menu-title, #button-ask-us:hover .line {
+    color: #D7293A;
+    opacity: 1;
+    border-color: #D7293A;
+    transition: all 0.3s ease 0s;
+  }
+  #button-ask-us:hover .logo {
+    opacity: 1;
+    /*   transition: all 0.3s ease 0s; */
+    border-radius: 50%;
   }
 }
 /* Reprendre l'architecture du BEM ici:*/
@@ -133,22 +216,18 @@ strong {
 }
 
 .fa-align-left {
-  position: absolute;
+  position: relative;
   text-align: center;
   top: 5px;
   left: 5px;
   color: #FFFFFF;
-  background-color: #D7293A;
+  background-color: transparent;
   font-size: 3em;
   max-width: 50px;
   z-index: 100;
 }
 
 .fa-align-left:hover {
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  z-index: 100;
   color: #1E233E;
   opacity: 0.8;
 }
@@ -166,10 +245,10 @@ strong {
 
 .button {
   text-align: center;
+  color: #D7293A;
 }
 
 .button:hover {
-  /* background-color: transparentize($secondary, 0.90);  */
   transition: all 0.3s ease 0s;
   opacity: 0.8;
   background-color: #1E233E;

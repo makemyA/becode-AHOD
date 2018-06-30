@@ -7,21 +7,18 @@
     border-radius: 0 0 0 40%;
 }
 @mixin button-menu ($color) {
-    position: absolute;
+    position: relative;
     text-align: center;
     top: 5px;
     left: 5px;
     color: $color;
-    background-color: $primary;
+    background-color: transparent;
     font-size: 3em;
     max-width: 50px;
     z-index: 100;
 }
 @mixin button-menu--hover() {
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    z-index: 100;
+    
     color:$secondary;
     opacity:0.8;
 }

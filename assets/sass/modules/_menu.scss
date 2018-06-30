@@ -9,13 +9,10 @@
     flex:100%;
 }
 
-@mixin button (){
+@mixin button--hover($hover) {
+@if $hover== true {
     
-}
 
-@mixin button--hover() {
-
-/* background-color: transparentize($secondary, 0.90);  */
 transition: all 0.3s ease 0s;
 
 opacity: 0.8;
@@ -32,8 +29,28 @@ color:$white;
   /*   transition: all 0.3s ease 0s; */
     border-radius: 50%;
 }
-} 
+}
+@if $hover== false {
+    
 
+    transition: all 0.3s ease 0s;
+    
+    opacity: 1;
+    background-color: white;
+    color:$primary;
+    & .menu-title, .line {
+        color: $primary;
+        opacity: 1;
+        border-color: $primary;
+         transition: all 0.3s ease 0s;
+    }
+    & .logo {
+        opacity:1;
+      /*   transition: all 0.3s ease 0s; */
+        border-radius: 50%;
+    }
+    }
+} 
 
 @mixin logo() {
     width:100%;

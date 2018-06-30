@@ -58,6 +58,12 @@
  function functionHide(item, index, array) {
     item=item.classList.add("hide");
 }
+function toggleHide(item){
+    item=item.classList.toggle("hide");
+}
+function toggleFlex(item){
+    item=item.classList.toggle("d-flex");
+}
 function returnMenu() {
     banner.classList.remove("hide");
     button.forEach(functionShow);
@@ -65,51 +71,55 @@ function returnMenu() {
     
  }
   /*Fonctions*/
-  if (mq.matches){
+/*    if (!mq.matches){
     // window width is at least 500px
-     }else{
+   
+    console.log("test");
+  }else {
+    button.forEach(functionDelete);
+    function functionDelete(item){
+        item=item.classList.remove("button");
+  }
+} */
+   /*   }else{
      // window width is less than 500px
-     }
+     } */
  function clickInfos() {
-    banner.classList.add("hide");
+     banner.classList.toggle("hide");
+     button.forEach(toggleHide);
+     buttonInfos.classList.toggle("hide");
+     menuInfos.classList.toggle("hide");
+     menuInfos.classList.toggle("d-flex");
+   /*  banner.classList.add("hide");
     button.forEach(functionHide);
     buttonInfos.classList.remove("hide");
-    menuInfos.classList.remove("hide");
+    menuInfos.classList.remove("hide"); */
  }
  function clickAgenda(){
-    banner.classList.add("hide");
-    button.forEach(functionHide);
-    buttonAgenda.classList.remove("hide");
-    menuAgenda.classList.remove("hide");
-    agendaCards.forEach(functionHide); 
+    banner.classList.toggle("hide");
+    button.forEach(toggleHide);
+    buttonAgenda.classList.toggle("hide");
+    menuAgenda.classList.toggle("hide");
+    menuAgenda.classList.toggle("d-flex");
+    agendaCards.forEach(toggleHide);
    
  }
  function clickContact(){
-    banner.classList.add("hide");
-    button.forEach(functionHide);
-    buttonContact.classList.remove("hide");
-    menuContact.classList.remove("hide");
+    banner.classList.toggle("hide");
+    button.forEach(toggleHide);
+    buttonContact.classList.toggle("hide");
+    menuContact.classList.toggle("hide");
+    menuContact.classList.toggle("d-flex");
  }
  function clickAskUs(){
-    banner.classList.add("hide");
-    button.forEach(functionHide);
-    buttonAskUs.classList.remove("hide");
-    menuAskUs.classList.remove("hide");
+    banner.classList.toggle("hide");
+    button.forEach(toggleHide);
+    buttonAskUs.classList.toggle("hide");
+    menuAskUs.classList.toggle("hide");
+    menuAskUs.classList.toggle("d-flex");
  } 
-
-
-    /* <script>$(function(){
-            $(buttonInfos).click(function(){
-               $(buttonInfos).toggle() // AFFICHE ET CACHE A CHAQUE CLIQUE SUR LE BOUTTON
-            });
-         });</script> */
-/* let row = document.getElementById("row1");
-
-let addTest = function() {
- row.classList.add("test");
-        
-    } 
-addTest(); */
-/* let changeImg = document.getElementById("image1");
-changeImg.addEventListener("mouseover", fonctionOver);
-changeImg.addEventListener("mouseleave", fonctionOut) */
+function loading(){
+    section.forEach(toggleHide);
+    agendaCards.forEach(toggleHide);
+}
+loading();
