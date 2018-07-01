@@ -61,6 +61,62 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* $primary: #1E233E;
 $secondary: #D7293A; */
 /*Body de base avec choix couleur*/
+@-webkit-keyframes button-menu {
+  100% {
+    font-size: 2.5em;
+    left: -10px;
+  }
+}
+#footer {
+  position: relative;
+  top: 100%;
+  left: 0%;
+  width: 100%;
+}
+
+#menu a {
+  text-decoration: none;
+  color: white;
+  padding: 0;
+}
+
+#menu li {
+  text-align: center;
+  padding: 0;
+}
+
+#menu:hover {
+  /*   background-color: $primary; */
+}
+#menu:hover a:hover {
+  color: #D7293A;
+}
+
+#menu #button-home {
+  color: #D7293A;
+  font-weight: 900;
+}
+#menu #button-home:hover {
+  color: white;
+}
+
+#menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@-webkit-keyframes menu {
+  0% {
+    left: -150px;
+  }
+  50% {
+    left: -50px;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
 /* $color $bg-color $font */
 /* $color $bg-color $font */
 /* $color $bg-color $font */
@@ -78,6 +134,26 @@ $secondary: #D7293A; */
     justify-content: center;
     width: 80%;
     margin: 0 10% 0 10%;
+  }
+
+  #menu {
+    width: 120px;
+    justify-content: space-around;
+    flex-direction: column;
+    position: fixed;
+    z-index: 90;
+    top: 0px;
+    left: 0px;
+    color: white;
+    background-color: #1E233E;
+    font-size: 1.4em;
+    animation-name: menu;
+    animation-duration: 0.3s;
+    animation-iteration-count: 1;
+    animation-delay: 0s;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
   }
 
   #banner-main {
@@ -169,8 +245,42 @@ $secondary: #D7293A; */
     /*   transition: all 0.3s ease 0s; */
     border-radius: 50%;
   }
+
+  p.border-left--secondary {
+    border-left: 2px solid white;
+    padding: 0 2em 0 2em;
+    text-align: left;
+    font-size: 1em;
+  }
+
+  p.border-left--primary {
+    border-left: 2px solid white;
+    padding: 0 2em 0 2em;
+    text-align: left;
+    font-size: 1em;
+  }
+
+  .border-right--secondary {
+    border-right: 2px solid #1E233E;
+    padding: 0 2em 0 2em;
+    text-align: right;
+    font-size: 1em;
+  }
+
+  p.border-right--primary {
+    border-right: 2px solid #D7293A;
+    padding: 0 2em 0 2em;
+    text-align: right;
+    font-size: 1em;
+    padding: 0 2.7em 0 2em;
+  }
 }
 /* Reprendre l'architecture du BEM ici:*/
+html {
+  width: 90%;
+  margin: 0 auto 0 auto;
+}
+
 body {
   display: flex;
   justify-content: center;
@@ -202,6 +312,12 @@ strong {
   display: none;
 }
 
+.list-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .banner-main {
   background-image: url("../img/banner-phone--red.png");
   background-repeat: no-repeat;
@@ -218,13 +334,20 @@ strong {
 .fa-align-left {
   position: relative;
   text-align: center;
-  top: 5px;
+  top: 10px;
   left: 5px;
   color: #FFFFFF;
   background-color: transparent;
   font-size: 3em;
   max-width: 50px;
   z-index: 100;
+  animation-name: button-menu;
+  animation-duration: 0s;
+  animation-iteration-count: 1;
+  animation-delay: 0;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
 }
 
 .fa-align-left:hover {
@@ -455,7 +578,7 @@ img.logo {
 }
 
 #carouselExampleFade {
-  max-width: 700px;
+  max-width: 900px;
 }
 
 .agenda-card {

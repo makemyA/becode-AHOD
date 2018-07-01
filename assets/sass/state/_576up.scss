@@ -6,6 +6,10 @@
         margin: 0 10% 0 10%;
         
     }
+    #menu {
+        @include menu();
+
+    }
     #banner-main {
         @include banner-main($banner-medium);
         height: 300px;
@@ -31,4 +35,17 @@
 }
 #button-ask-us:hover{
     @include button--hover(false);
+}
+p.border-left--secondary {
+    @include border-left(white,$font-text1);
+}
+p.border-left--primary {
+    @include border-left(white,$font-text1);
+}
+.border-right--secondary {
+    @include border-right($secondary,$font-text1);
+}
+p.border-right--primary {
+    @include border-right($primary,$font-text1);
+    padding: 0 2.7em 0 2em;
 }

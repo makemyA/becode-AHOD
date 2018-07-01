@@ -20,6 +20,10 @@
 
 
 /* Reprendre l'architecture du BEM ici:*/
+html {
+    width:90%;
+    margin: 0 auto 0 auto;
+}
 body {
     @include body--color($white);
 }
@@ -39,7 +43,12 @@ strong {
 }
 .hide {
     display: none;
-  } 
+  }
+.list-menu {
+   position: absolute;
+   top:0;
+   left:0;
+} 
 .banner-main {
     @include banner-main($banner-small);
 }
@@ -148,7 +157,7 @@ img.logo {
 
 }
 #carouselExampleFade{
-    max-width: 700px;
+    max-width: 900px;
 }
 .agenda-card {
 color: green;

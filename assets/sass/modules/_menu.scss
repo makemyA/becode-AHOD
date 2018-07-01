@@ -1,3 +1,58 @@
+#menu a {
+    text-decoration: none;
+    color:white;
+    padding:0;
+}
+#menu li {
+    text-align: center;
+    padding:0;
+}
+#menu:hover {
+  /*   background-color: $primary; */
+   & a:hover {
+    color: $primary;
+   }
+}
+#menu #button-home{
+    color:$primary;
+    font-weight:900;
+    &:hover{
+        color:white;
+    }
+}
+#menu{
+    list-style: none;
+    padding: 0;
+    margin:0;
+}
+@mixin menu(){
+       
+        
+        width: 120px;
+        justify-content: space-around;
+        flex-direction: column;
+        position: fixed;
+        z-index: 90;
+        top:0px;
+        left:0px;
+        color: white;
+        background-color: $secondary;
+        font-size: 1.4em;
+        animation-name: menu;
+	    animation-duration: 0.3s;
+	    animation-iteration-count:1;
+	    animation-delay:0s;
+	    animation-direction: normal;
+	    animation-fill-mode: forwards;
+	    animation-timing-function: linear; 
+    }
+@-webkit-keyframes menu {
+    0% {left:-150px;}
+    50% {left:-50px;}
+    100% {opacity:0.8;}
+}
+
+    
 @mixin menu-title () {
     font-size:1.4em;
     font-weight: 550;

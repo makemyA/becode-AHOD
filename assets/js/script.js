@@ -1,6 +1,6 @@
  const mq = window.matchMedia(("min-width:576px"));
  
- let menu= document.getElementsByClassName("menu");
+ let menu= document.getElementById("menu");
  let hide = document.querySelectorAll(".hide");
  let section = document.querySelectorAll(".section");
  let button = document.querySelectorAll(".button");
@@ -26,7 +26,7 @@
 
 
  buttonAgenda.addEventListener("click", clickAgenda); 
- buttonMenu.addEventListener("click", returnMenu);
+ buttonMenu.addEventListener("click", afficherMenu);
  buttonInfos.addEventListener("click", clickInfos);
  buttonContact.addEventListener("click",clickContact);
  buttonAskUs.addEventListener("click",clickAskUs);
@@ -35,6 +35,7 @@
  buttonAgendaCard2.addEventListener("click",clickCard2);
  buttonAgendaCard3.addEventListener("click",clickCard3);
  buttonAgendaCard4.addEventListener("click",clickCard4);
+
 
  function clickCard1(){
      agendaCard1.classList.toggle("hide");
@@ -64,10 +65,8 @@ function toggleHide(item){
 function toggleFlex(item){
     item=item.classList.toggle("d-flex");
 }
-function returnMenu() {
-    banner.classList.remove("hide");
-    button.forEach(functionShow);
-    section.forEach(functionHide);
+function afficherMenu() {
+    menu.classList.toggle("hide");
     
  }
   /*Fonctions*/
@@ -101,7 +100,7 @@ function returnMenu() {
     buttonAgenda.classList.toggle("hide");
     menuAgenda.classList.toggle("hide");
     menuAgenda.classList.toggle("d-flex");
-    agendaCards.forEach(toggleHide);
+    /* agendaCards.forEach(toggleHide); */
    
  }
  function clickContact(){
@@ -121,5 +120,6 @@ function returnMenu() {
 function loading(){
     section.forEach(toggleHide);
     agendaCards.forEach(toggleHide);
+    menu.classList.toggle("hide");
 }
 loading();
