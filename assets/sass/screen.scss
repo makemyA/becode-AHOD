@@ -162,9 +162,7 @@ img.logo {
 #carouselExampleFade{
     max-width: 900px;
 }
-#news-letter::after {
-    @include circle();
-}
+
 .news-letter {
     /* $color $bg-color $font */
     @include section-title($white,$secondary,$font-title1);

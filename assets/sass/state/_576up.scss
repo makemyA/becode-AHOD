@@ -80,3 +80,6 @@ p.border-right--primary {
     @include border-right($primary,$font-text1);
     padding: 0 2.7em 0 2em;
 }
+#news-letter::after {
+    @include circle();
+}

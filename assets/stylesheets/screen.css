@@ -334,6 +334,17 @@ $secondary: #D7293A; */
     font-size: 1em;
     padding: 0 2.7em 0 2em;
   }
+
+  #news-letter::after {
+    position: absolute;
+    top: 90%;
+    left: 30%;
+    border-radius: 50%;
+    width: 40%;
+    height: 100%;
+    background-color: white;
+    content: "";
+  }
 }
 /* Reprendre l'architecture du BEM ici:*/
 body {
@@ -630,17 +641,6 @@ img.logo {
 
 #carouselExampleFade {
   max-width: 900px;
-}
-
-#news-letter::after {
-  position: absolute;
-  top: 90%;
-  left: 30%;
-  border-radius: 50%;
-  width: 40%;
-  height: 100%;
-  background-color: white;
-  content: "";
 }
 
 .news-letter {
