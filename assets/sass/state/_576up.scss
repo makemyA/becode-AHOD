@@ -2,13 +2,44 @@
     body {
         display: flex;
         justify-content: center;
-        width: 80%;
-        margin: 0 10% 0 10%;
+        background-color: transparent;
         
     }
-    #menu {
-        @include menu();
+    html {
+        width:90%;
+        margin: 0 auto 0 auto;
+    }
+   /*  #background-image {
+        background-image: url('../img/atomium-opacity.jpg');
+        background-attachment: fixed;
+        
+        background-size: contain; */
+        /* background-color: $bg-color; */
+         
+    #button-menu {
+        color: $primary;
+        position: fixed;
+        text-align: center;
+        top: 40%;
+        left: 0;
+        background-color: transparent;
+     font-size: 2.5em;
+        max-width: 50px;
+        z-index: 100;
+        &:hover{
+            opacity:0.8;
+            font-size: 2.7em;
+        }
+    }   
+    #button-menu.fixed{
+        @include button-menu();
+    }
+    #menu.in {
+        @include in();
 
+    }
+    #menu.out{
+        @include out();
     }
     #banner-main {
         @include banner-main($banner-medium);

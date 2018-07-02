@@ -23,7 +23,8 @@
  let buttonAgendaCard2= document.getElementById("button-agenda-2");
  let buttonAgendaCard3= document.getElementById("button-agenda-3");
  let buttonAgendaCard4= document.getElementById("button-agenda-4");
-
+ let footer = document.getElementById("footer");
+ let buttonFooter = document.getElementById("button-footer");
 
  buttonAgenda.addEventListener("click", clickAgenda); 
  buttonMenu.addEventListener("click", afficherMenu);
@@ -35,7 +36,20 @@
  buttonAgendaCard2.addEventListener("click",clickCard2);
  buttonAgendaCard3.addEventListener("click",clickCard3);
  buttonAgendaCard4.addEventListener("click",clickCard4);
+/*  footer.addEventListener("mouseover", mouseOver);
+ footer.addEventListener("mouseleave", mouseLeave); */
+ buttonFooter.addEventListener("click",afficherFooter);
+function afficherFooter(){
+    footer.classList.toggle("up");
+}
+/*  function mouseOver(){
+     footer.classList.toggle("up");
+ } */
+/*  function mouseLeave(){
+    footer.classList.toggle("up");
+    footer.classList.toggle("down");
 
+} */
 
  function clickCard1(){
      agendaCard1.classList.toggle("hide");
@@ -66,7 +80,12 @@ function toggleFlex(item){
     item=item.classList.toggle("d-flex");
 }
 function afficherMenu() {
-    menu.classList.toggle("hide");
+    
+    menu.classList.remove("hide");
+    menu.classList.toggle("in");
+    menu.classList.toggle("out");
+    buttonMenu.classList.toggle("fixed");
+    
     
  }
   /*Fonctions*/
@@ -116,10 +135,14 @@ function afficherMenu() {
     buttonAskUs.classList.toggle("hide");
     menuAskUs.classList.toggle("hide");
     menuAskUs.classList.toggle("d-flex");
- } 
+ }
+
 function loading(){
     section.forEach(toggleHide);
     agendaCards.forEach(toggleHide);
-    menu.classList.toggle("hide");
+    menu.classList.add("hide");
+     menu.classList.toggle("out"); 
+   /*  menu.classList.toggle("show"); */
 }
+
 loading();

@@ -9,10 +9,13 @@
     <link href="assets/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
     <title>Document</title>
 </head>
+<div id="background-image">
 <body>
+       
 <div class="container-fluid">
         
         <div class="row">
+                <i id="button-menu"class="d-sm-flex fas fa-align-left button-menu p-1 col-2"></i>
                 <ul id="menu" class="list-menu">
                         <li class="py-2"><a id="button-home"href="#banner-main">HOME</a></li>
                         <li class="py-2"><a href="#button-infos">Info</a></li>
@@ -20,32 +23,31 @@
                         <li class="py-2"><a href="#button-contact">Contact</a></li>
                         <li class="py-2"><a href="#button-ask-us">Ask Us</a></li>
                 </ul>
-            <div id="banner-main"class="col-12 banner-main">
-                    
-                     <i id="button-menu"class="fas fa-align-left button-menu p-1 col-2"></i>
+            <div id="banner-main"class="col-12 banner-main">  
                 <div class=row>
                 <div class="circle">   
                 </div>
                 </div> 
             </div>
-    </div>
+        </div>
+    
     <div class="container-fluid">       
             <div id="button-infos" class="row button justify-content-center mt-2 pb-3">    
                 
             
                     <h1 class="mt-5 col-12 menu-title">Infos</h1> 
                 
-                    <div class="d-flex   align-items-end col-2">
+                    <div class="d-flex align-items-end col-2">
                     <div class="line"></div>
                     </div>
                 
-                    <div class="col-2"><img class="logo" src="assets/img/logo-menu.jpg" width ='100%' height= "100%" alt="logo"></div>
+                    <div class="col-2 p-0"><img class="logo" src="assets/img/logo-menu.jpg" width ='100%' height= "100%" alt="logo"></div>
                 
-                     <div class="d-flex ml-1   align-items-end col-2">
+                     <div class="d-flex align-items-end col-2">
                     <div class="line"></div>
                     </div>
             </div>
-            
+           
             <div id="menu-infos" class="row section justify-content-center mt-3 col-12">
                 <div class="p-2 mt-2 mb-2 col-12  section--color-secondary  circle-left">
                     <p class="border-left--secondary">Chaque année, Laeken Découverte vous propose un programme
@@ -61,7 +63,9 @@
                     <p class="border-left--primary">Toutes nos visites sont disponibles pour les groupes.</p>
                     <p class="border-left--primary">Contactez-nous pour nous faire part de vos souhaits </p>
                 </div>
-                <h2 class="section-title col-10 col-md-6">Last minut</h2>
+               
+                <h2 class="section-title col-10 col-md-6">Visites du mois</h2>
+            
                 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
                     <div class="carousel-inner">
                       <div class="carousel-item active">
@@ -159,9 +163,9 @@
                             <div class="line"></div>
                             </div>
                         
-                            <div class="col-2"><img class="logo" src="assets/img/logo-menu.jpg" width ='100%' height= "100%" alt="logo"></div>
+                            <div class="col-2 p-0"><img class="logo" src="assets/img/logo-menu.jpg" width ='100%' height= "100%" alt="logo"></div>
                         
-                             <div class="d-flex ml-1   align-items-end col-2">
+                             <div class="d-flex align-items-end col-2">
                             <div class="line"></div>
                             </div>
             </div>
@@ -263,27 +267,38 @@
 
                     <h1 class="mt-5 col-12 menu-title">contact</h1> 
                 
-                    <div class="d-flex   align-items-end col-2">
+                    <div class="d-flex align-items-end col-2">
                             <div class="line"></div>
                             </div>
                         
-                            <div class="col-2"><img class="logo" src="assets/img/logo-menu.jpg" width ='100%' height= "100%" alt="logo"></div>
+                            <div class="col-2 p-0"><img class="logo" src="assets/img/logo-menu.jpg" width ='100%' height= "100%" alt="logo"></div>
                         
-                             <div class="d-flex ml-1   align-items-end col-2">
+                             <div class="d-flex align-items-end col-2">
                             <div class="line"></div>
                             </div>
             </div>
             <!-- *********** DEBUT PARTIE GUILLAUME ************** -->
             
             <div id="menu-contact" class="row section menu mt-3 col-12">
-                <div class="p-4 col-6 section-left circle-left">
-                    <p>Notre équipe est à votre dispositon pour toutes vos questions</p>
-                    <p>Numéro centre communale laeken : 02 201 23 45</p>
-                    <p>Maison communale de Laeken : Rue Tielemans 32, 1020 Bruxelles </p>
+                <div class="col-12 col-md-9 mx-md-5 mb-3"><img src="assets/img/banner.jpg" alt="guide">
                 </div>
-                <div class="p-4 col-6  section-right circle-right">
+
+                <div class="p-3 col-12 col-md-3  circle-left">
+                    <div class=" my-3 py-2 section--bg-color-secondary">
+                        <p class="py-1 col-12">Notre équipe est à votre dispositon pour toutes vos questions</p>
+                    </div>
+                    <div class=" my-1 py-2 section--bg-color-primary text-align-center">
+                        <p class="py-1 col-10">Numéro centre communale laeken : </p>
+                        <p class="col-10">02 201 23 45</p>
+                    </div>
+                    <div class=" my-1 py-2 section--bg-color-primary">
+                        <p class="py-1 col-10">Maison communale de Laeken :</p>
+                        <p class="col-10 ">Rue Tielemans 32, 1020 Bruxelles</p>
+                    </div>
+                </div>
+                <div class="p-3 mt-3 col-12 col-md-9  section-right circle-right">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d40281.02826551602!2d4.328578800679539!3d50.8762660354605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3c3bba6f090db%3A0x4b24dce84ce4e389!2sbpost!5e0!3m2!1sen!2sbe!4v1530104445886"
-                        width="500" height="350" frameborder="0" style="border:0" allowfullscreen>
+                        width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen>
                     </iframe>
                 </div>
             </div>
@@ -294,36 +309,42 @@
 
                     <h1 class="mt-5 col-12 menu-title">ask us</h1> 
                 
-                    <div class="d-flex pl-0 pr-0 align-items-end col-2">
+                    <div class="d-flex align-items-end col-2">
                     <div class="line"></div>
                     </div>
                 
-                    <div class="col-2"><img class="logo" src="assets/img/logo-menu.jpg" width ='100%' height= "100%" alt="logo"></div>
+                    <div class="col-2 p-0"><img class="logo" src="assets/img/logo-menu.jpg" width ='100%' height= "100%" alt="logo"></div>
                 
-                     <div class="d-flex pl-2 pr-0  align-items-end col-2">
+                     <div class="d-flex  align-items-end col-2">
                     <div class="line"></div>
                     </div>
             </div>
 
               <!-- *********** DEBUT PARTIE PHILIPPE ************** -->
             <div id="menu-ask-us" class="row section menu mt-3 col-12">
+                <div class="col-8 section--color-secondary">
+                    <p>
+                            Envoyez nous votre <strong>message</strong>, nous le traiterons dans les meilleurs délais.
+                            Vous pouvez également nous contacter par <strong>téléphone</strong> pendant les heures de bureau du <strong>lundi</strong> au <strong>vendredi</strong>.
+                    </p>
+                </div>
                 <div class="p-4 col-6 section-left circle-left">
                         <form>
                                 <div class="form-group pt-sm-1">
-                                    <label for="formGroupExampleInput">Prénom et nom :</label>
+                                    <label class="mb-2 card-title" for="formGroupExampleInput">Prénom et nom :</label>
                                     <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Votre prénom et nom ici..." required>
                                 </div>
                                 <div class="form-group pt-sm-1">
-                                    <label for="formGroupExampleInput2">Votre adresse email :</label>
+                                    <label class="mb-2 card-title" for="formGroupExampleInput2">Votre adresse email :</label>
                                     <input type="email" class="form-control" id="formGroupExampleInput2" placeholder="Votre adresse email ici..." required>
                                 </div>
                                 <div class="form-group pt-sm-1">
-                                    <label for="formGroupExampleInput">Sujet :</label>
+                                    <label class="mb-2 card-title" for="formGroupExampleInput">Sujet :</label>
                                     <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Le sujet ici..." required>
                                 </div>
                                 <p class="Fake-br"></p>
                                 <div class="form-group pt-sm-1 test">
-                                    <label for="comment">Message :</label>
+                                    <label class="mb-2 card-title" for="comment">Message :</label>
                                     <textarea class="form-control" rows="4" id="comment" placeholder="Votre message ici..." required></textarea>
                                 </div>
                                 <p class="Fake-br"></p>
@@ -331,20 +352,21 @@
                         </form>
                
                 </div>
-                <div class="p-4 col-6 section-right circle-right">
-                        <form>
-                                <p class="News-letter-text">Si vous voulez recevoir notre newsletter :</p>
-                                <label for="email-2">Votre adresse email :</label>
-                                <input type="email" class="form-control" id="email-2" placeholder="Votre adresse email ici..." required>
-                                <br>
-                                <button class="btn btn-primary" type="submit">Valider</button>
+                <div id="news-letter" class="d-flex align-items-center justify-content-center my-5 col-6 section--bg-color-secondary section-right circle-right">
+                        <form class="row d-flex justify-content-center">
+                                <label class="news-letter p-0 mb-5 col-12 " for="email-2">Recevez notre newsletter! :</label>
+                                <input type="email" class="col-8 mx-4" id="email-2" placeholder="Votre adresse email ici..." required>
+                                <button class=" mt-3 btn btn-primary  col-4" type="submit">Valider</button>
                         </form>
                 </div>
             </div>
              <!-- *********** FIN PARTIE PHILIPPE ************** -->
     </div>
-    <div class="container-fluid">
+</div>
+    <div  class="container-fluid">
+            
             <div id="footer"class="d-flex row pt-4 col-12 circle-footer">
+                    <i id="button-footer"class=" fas fa-angle-double-up"></i>
                 <div class="d-flex col-6 circle-footer-left">
                     <p class="copyright">&copy makemyA</p>
                 </div>        
@@ -360,5 +382,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 </body>
+</div>
 </html>
 

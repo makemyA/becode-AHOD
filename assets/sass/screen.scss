@@ -9,6 +9,7 @@
 @import "modules/menu";
 @import "layout/infos";
 @import "theme/font";
+@import "animations/anim-menu";
 @font-face {
     font-family: "Segoe";
     src: url("../sass/theme/Segoe\ UI.ttf") format("ttf");
@@ -20,10 +21,8 @@
 
 
 /* Reprendre l'architecture du BEM ici:*/
-html {
-    width:90%;
-    margin: 0 auto 0 auto;
-}
+
+
 body {
     @include body--color($white);
 }
@@ -44,23 +43,27 @@ strong {
 .hide {
     display: none;
   }
-.list-menu {
+/* .list-menu {
    position: absolute;
    top:0;
    left:0;
-} 
+}  */
+#button-menu{
+    display:none;
+}
+#menu-contact img {
+    width:100%;
+}
 .banner-main {
     @include banner-main($banner-small);
+}
+.banner-main::after{
+ @include circle();
 }
 .banner-main--hide {
     display:none;
 }
-.fa-align-left {
-    @include button-menu($white);
-}
-.fa-align-left:hover {
-    @include button-menu--hover();
-}
+
 .circle {
     @include circle-header();
 }
@@ -159,8 +162,20 @@ img.logo {
 #carouselExampleFade{
     max-width: 900px;
 }
-.agenda-card {
-color: green;
+#news-letter::after {
+    @include circle();
+}
+.news-letter {
+    /* $color $bg-color $font */
+    @include section-title($white,$secondary,$font-title1);
+    
+    letter-spacing: 0.3em;
+    line-height: 1.5em;
+}
+
+.form-control {
+    border: 1px solid $primary;
+    color: $secondary;
 }
 .circle-footer {
 justify-content: center;
@@ -181,6 +196,32 @@ padding:0;
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+#footer.up {
+    @include footer-up();
+}
+#footer.down {
+    @include footer-down();
+}
+#button-footer {
+    position: fixed;
+    color:$secondary;
+    font-size: 2em;
+    top:97%;
+    left:50%;
+    z-index: 500;
+    opacity: 1;
+    &:hover {
+        opacity:0.8;
+        top: 96%;
+        font-size:2.2em;
+    }
+}
+#footer {
+    position: fixed;
+    bottom:-80px;
+    left:0%;
+    width: 100%;
 }
 .row--blue {
     @include box--color($primary, $white)
