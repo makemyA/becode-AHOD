@@ -1,6 +1,8 @@
 {
-    "name": "",
-    "short_name": "",
+    "name": "Laeken Decouverte",
+    "short_name": "Laeken-D",
+    "start_url": "index.html?utm_source=homescreen",
+    "scope" : "./",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
