@@ -1,14 +1,10 @@
 
-    body {
-        display: flex;
-        justify-content: center;
-        background-color: transparent;
-        
-    }
-    html {
-        width:90%;
-        margin: 0 auto 0 auto;
-    }
+   
+        body {
+           width: 80%;
+        }
+    
+    
    /*  #background-image {
         background-image: url('../img/atomium-opacity.jpg');
         background-attachment: fixed;
@@ -43,7 +39,8 @@
     }
     #banner-main {
         @include banner-main($banner-medium);
-        height: 300px;
+        
+        
         &.hide {
             display:flex;
         }

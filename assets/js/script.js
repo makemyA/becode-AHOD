@@ -85,6 +85,8 @@ function afficherMenu() {
     menu.classList.toggle("in");
     menu.classList.toggle("out");
     buttonMenu.classList.toggle("fixed");
+    footer.classList.toggle("up");
+    footer.classList.toggle("down");
     
     
  }
@@ -141,7 +143,8 @@ function loading(){
     section.forEach(toggleHide);
     agendaCards.forEach(toggleHide);
     menu.classList.add("hide");
-     menu.classList.toggle("out"); 
+     menu.classList.toggle("out");
+     footer.classList.toggle("down"); 
    /*  menu.classList.toggle("show"); */
 }
 

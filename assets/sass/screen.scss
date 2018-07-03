@@ -25,6 +25,7 @@
 
 body {
     @include body--color($white);
+   
 }
 strong {
     color:$primary;
@@ -133,6 +134,7 @@ img.logo {
     transform: scale(1);
     width: 100%;
     height: auto;
+    
    
 }
 .btn {
@@ -160,7 +162,7 @@ img.logo {
 
 }
 #carouselExampleFade{
-    max-width: 900px;
+    max-width: 700px;
 }
 
 .news-letter {
@@ -201,29 +203,15 @@ padding:0;
 #footer.down {
     @include footer-down();
 }
-#button-footer {
-    position: fixed;
-    color:$secondary;
-    font-size: 2em;
-    top:97%;
-    left:50%;
-    z-index: 500;
-    opacity: 1;
-    &:hover {
-        opacity:0.8;
-        top: 96%;
-        font-size:2.2em;
-    }
-}
-#footer {
-    position: fixed;
-    bottom:-80px;
-    left:0%;
-    width: 100%;
-}
 .row--blue {
     @include box--color($primary, $white)
 }
 .row--red {
     @include box--color($secondary, $white)
+}
+#image-contact {
+    max-width: 800px;
+}
+#map {
+    min-height: 300px;
 }

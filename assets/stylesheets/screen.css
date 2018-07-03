@@ -61,6 +61,48 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* $primary: #1E233E;
 $secondary: #D7293A; */
 /*Body de base avec choix couleur*/
+#button-footer {
+  position: fixed;
+  color: #FFFFFF;
+  font-size: 1.3em;
+  top: 97%;
+  left: 50%;
+  z-index: 500;
+  opacity: 0.7;
+}
+#button-footer:hover {
+  opacity: 1;
+  top: 96%;
+  font-size: 1.5em;
+}
+
+#footer {
+  position: fixed;
+  bottom: -80px;
+  left: 0%;
+  width: 100%;
+}
+
+#list-media {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 2em;
+}
+#list-media li i {
+  justify-content: space-between;
+  list-style: none;
+}
+#list-media a {
+  text-decoration: none;
+  color: white;
+}
+#list-media a:hover {
+  color: #1E233E;
+}
+
 #menu a {
   text-decoration: none;
   color: white;
@@ -140,10 +182,10 @@ $secondary: #D7293A; */
 }
 @-webkit-keyframes down {
   0% {
-    bottom: 10px;
+    bottom: 0px;
   }
   100% {
-    bottom: 0px;
+    bottom: -80px;
   }
 }
 @font-face {
@@ -152,14 +194,7 @@ $secondary: #D7293A; */
 }
 @media only all and (min-width: 576px) {
   body {
-    display: flex;
-    justify-content: center;
-    background-color: transparent;
-  }
-
-  html {
-    width: 90%;
-    margin: 0 auto 0 auto;
+    width: 80%;
   }
 
   /*  #background-image {
@@ -219,11 +254,10 @@ $secondary: #D7293A; */
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 200px;
+    height: 30vh;
     border-radius: 0 0 0 40%;
     margin: 0;
     padding: 0;
-    height: 300px;
   }
   #banner-main.hide {
     display: flex;
@@ -348,10 +382,9 @@ $secondary: #D7293A; */
 }
 /* Reprendre l'architecture du BEM ici:*/
 body {
-  display: flex;
+  /* display: flex; */
   justify-content: center;
-  width: 100%;
-  margin: 0;
+  margin: 0 auto 0 auto;
   /* background-color: $color; */
   color: #D7293A;
   font-family: 'Segoe', Tahoma, Geneva, Verdana, sans-serif;
@@ -396,7 +429,7 @@ strong {
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 200px;
+  height: 30vh;
   border-radius: 0 0 0 40%;
   margin: 0;
   padding: 0;
@@ -640,7 +673,7 @@ img.logo {
 }
 
 #carouselExampleFade {
-  max-width: 900px;
+  max-width: 700px;
 }
 
 .news-letter {
@@ -739,28 +772,6 @@ img.logo {
   animation-timing-function: linear;
 }
 
-#button-footer {
-  position: fixed;
-  color: #1E233E;
-  font-size: 2em;
-  top: 97%;
-  left: 50%;
-  z-index: 500;
-  opacity: 1;
-}
-#button-footer:hover {
-  opacity: 0.8;
-  top: 96%;
-  font-size: 2.2em;
-}
-
-#footer {
-  position: fixed;
-  bottom: -80px;
-  left: 0%;
-  width: 100%;
-}
-
 .row--blue {
   background-color: #D7293A;
   color: #FFFFFF;
@@ -769,4 +780,12 @@ img.logo {
 .row--red {
   background-color: #1E233E;
   color: #FFFFFF;
+}
+
+#image-contact {
+  max-width: 800px;
+}
+
+#map {
+  min-height: 300px;
 }
