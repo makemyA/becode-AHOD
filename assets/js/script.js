@@ -25,6 +25,8 @@
  let buttonAgendaCard4= document.getElementById("button-agenda-4");
  let footer = document.getElementById("footer");
  let buttonFooter = document.getElementById("button-footer");
+ let mainSection = document.getElementById("main-section");
+ let sectionProgressive = document.getElementById("section-progressive");
 
  buttonAgenda.addEventListener("click", clickAgenda); 
  buttonMenu.addEventListener("click", afficherMenu);
@@ -36,12 +38,18 @@
  buttonAgendaCard2.addEventListener("click",clickCard2);
  buttonAgendaCard3.addEventListener("click",clickCard3);
  buttonAgendaCard4.addEventListener("click",clickCard4);
+ buttonFooter.addEventListener("click", afficherProgressive);
+ function afficherProgressive(){
+     mainSection.classList.toggle("hide");
+     sectionProgressive.classList.toggle("hide");
+
+ }
 /*  footer.addEventListener("mouseover", mouseOver);
  footer.addEventListener("mouseleave", mouseLeave); */
- buttonFooter.addEventListener("click",afficherFooter);
+/*  buttonFooter.addEventListener("click",afficherFooter);
 function afficherFooter(){
     footer.classList.toggle("up");
-}
+} */
 /*  function mouseOver(){
      footer.classList.toggle("up");
  } */
@@ -144,7 +152,8 @@ function loading(){
     agendaCards.forEach(toggleHide);
     menu.classList.add("hide");
      menu.classList.toggle("out");
-     footer.classList.toggle("down"); 
+     footer.classList.toggle("down");
+     sectionProgressive.classList.add("hide"); 
    /*  menu.classList.toggle("show"); */
 }
 

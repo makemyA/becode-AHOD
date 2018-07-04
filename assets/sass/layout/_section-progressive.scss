@@ -1,0 +1,21 @@
+#section-progressive {
+    position: absolute;
+    @include progressive();
+
+    background-color: white;
+    color: $secondary;
+    line-height: 1.5em;
+    & h1 {
+        text-align: center;
+        line-height: 8em;
+        height:100%;
+    }
+    & .fa-arrow-up {
+        position: fixed;
+        top:5px;
+        left:87%;
+        font-size: 2em;
+        color: $primary;
+        @include arrow();
+    }
+} 

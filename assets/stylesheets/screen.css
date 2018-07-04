@@ -63,17 +63,17 @@ $secondary: #D7293A; */
 /*Body de base avec choix couleur*/
 #button-footer {
   position: fixed;
-  color: #FFFFFF;
-  font-size: 1.3em;
-  top: 97%;
+  color: #1E233E;
+  font-size: 2em;
+  top: 94%;
   left: 50%;
   z-index: 500;
-  opacity: 0.7;
+  opacity: 0.8;
 }
 #button-footer:hover {
   opacity: 1;
   top: 96%;
-  font-size: 1.5em;
+  font-size: 1.6em;
 }
 
 #footer {
@@ -188,6 +188,52 @@ $secondary: #D7293A; */
     bottom: -80px;
   }
 }
+@-webkit-keyframes progressive {
+  0% {
+    top: 100%;
+  }
+  100% {
+    top: 0%;
+  }
+}
+@-webkit-keyframes arrow {
+  100% {
+    top: 0px;
+  }
+}
+#section-progressive {
+  position: absolute;
+  animation-name: progressive;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-delay: 0;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  background-color: white;
+  color: #1E233E;
+  line-height: 1.5em;
+}
+#section-progressive h1 {
+  text-align: center;
+  line-height: 8em;
+  height: 100%;
+}
+#section-progressive .fa-arrow-up {
+  position: fixed;
+  top: 5px;
+  left: 87%;
+  font-size: 2em;
+  color: #D7293A;
+  animation-name: arrow;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+  animation-delay: 0;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
 @font-face {
   font-family: "Segoe";
   src: url("../sass/theme/Segoe UI.ttf") format("ttf");
