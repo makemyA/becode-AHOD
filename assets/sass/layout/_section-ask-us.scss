@@ -1,0 +1,11 @@
+.news-letter {
+    /* $color $bg-color $font */
+    @include section-title($white,$secondary,$font-title1);
+    
+    letter-spacing: 0.3em;
+    line-height: 1.5em;
+}
+.form-control {
+    border: 1px solid $primary;
+    color: $secondary;
+}

@@ -1,26 +1,5 @@
-#menu a {
-    text-decoration: none;
-    color:white;
-    padding:0;
-}
-#menu li {
-    text-align: center;
-    padding:0;
-}
-#menu:hover {
-  /*   background-color: $primary; */
-   & a:hover {
-    color: $primary;
-   }
-}
-#menu #button-home{
-    color:$primary;
-    font-weight:900;
-    &:hover{
-        color:white;
-    }
-}
 #menu{
+    display:none;
     list-style: none;
     padding: 0;
     margin:0;
@@ -35,122 +14,49 @@
     background-color: $secondary;
     font-size: 1.4em;
 }
-@mixin in(){
-        animation-name: in;
-	    animation-duration: 0.3s;
-	    animation-iteration-count:1;
-	    animation-delay:0s;
-	    animation-direction: normal;
-	    animation-fill-mode: forwards;
-	    animation-timing-function: linear; 
-    }
-    @mixin out(){
-        animation-name: out;
-	    animation-duration: 0.3s;
-	    animation-iteration-count:1;
-	    animation-delay:0s;
-	    animation-direction: normal;
-	    animation-fill-mode: forwards;
-	    animation-timing-function: linear; 
-    }
-  
-
-    
-@mixin menu-title () {
-    font-size:1.4em;
-    font-weight: 550;
-    letter-spacing: 0.1em;
-    color: $primary;
-    text-transform: uppercase;
-    text-align: center;
-    cursor: pointer;
-    flex:100%;
-}
-
-@mixin button--hover($hover) {
-@if $hover== true {
-    
-
-transition: all 0.3s ease 0s;
-
-opacity: 0.8;
-background-color: $secondary;
-color:$white;
-& .menu-title, .line {
-    color:white;
-    opacity: 0.8;
-    border-color: white;
-     transition: all 0.3s ease 0s;
-}
-& .logo {
-    opacity:0.8;
-  /*   transition: all 0.3s ease 0s; */
-    border-radius: 50%;
-}
-}
-@if $hover== false {
-    
-
-    transition: all 0.3s ease 0s;
-    
-    opacity: 1;
-    background-color: white;
+#menu #button-home{
     color:$primary;
-    & .menu-title, .line {
-        color: $primary;
-        opacity: 1;
-        border-color: $primary;
-         transition: all 0.3s ease 0s;
+    font-weight:900;
+    &:hover{
+        color:white;
     }
-    & .logo {
-        opacity:1;
-      /*   transition: all 0.3s ease 0s; */
-        border-radius: 50%;
-    }
-    }
-} 
-
-@mixin logo() {
-    width:100%;
-    height:100%;
-    max-width: 80px;
-    min-width: 50px;
+}
+#menu li {
     text-align: center;
-   
+    padding:0;
+}
+#menu a {
+    text-decoration: none;
+    color:white;
+    padding:0;
 }
 
-@mixin line() {
-    align-items: flex-start;
-    border-top: 2px solid $primary;
-    width: 100%;
-    height: 50%;
+#menu:hover {
+  /*   background-color: $primary; */
+   & a:hover {
+    color: $primary;
+   }
 }
-@mixin circle-left () {
-    position: relative;
-    border-radius: 50%;
-    width: 100px; 
-    height: 50px;
-    background: white;
-    border-top-left-radius: 100%; // 4*height
-    border-top-right-radius: 0%; // 4*height
+
+#button-menu {
+    color: $white;
+    position: fixed;
+    text-align: center;
+    top: 1%;
+    left: 0;
+    background-color: transparent;
+
+    font-size: 2.5em;
+    max-width: 50px;
+    z-index: 100;
+    &:hover{
+        opacity:0.8;
+        font-size: 2.7em;
+    }
 }
-@mixin circle-right () {
-    position: relative;
-    border-radius: 50%;
-    width: 100px; 
-    height: 50px;
-    background: white;
-    border-top-left-radius: 0%; // 4*height
-    border-top-right-radius: 100%; // 4*height
-}
-@mixin circle(){
-position: absolute;
-    top: 90%;
-    left:30%;
-    border-radius: 50%;
-    width: 40%;
-    height: 100%;
-    background-color: white;
-     content:"";
-}
+#button-menu.color-primary{
+    color: $primary;
+}   
+
+
 

@@ -1,3 +1,19 @@
+@-webkit-keyframes start-menu {
+    0% {}
+    100% {width:100vw; height:100vh;}
+}
+@-webkit-keyframes loading-text {
+    0% {}
+    100% {opacity:1;}
+}
+@-webkit-keyframes button-enter {
+    0% {display:flex;}
+    100% {opacity:1; width:100%; height: auto;}
+}
+@-webkit-keyframes button-enter2 {
+    0% {opacity:1;}
+    100% {opacity:0.4;}
+}
 @-webkit-keyframes fixedWhite {
     0% {}
     100% {color: white;}
@@ -10,12 +26,6 @@
     0% {left:-50px;}
     100% {left:-150px;}
 }
-
-
-@-webkit-keyframes progressive {
-    0% {top:100%;}
-    100% {top:0%;}
-}
 @mixin progressive() {
     animation-name: progressive;
     animation-duration: 1s;
@@ -25,6 +35,12 @@
 	animation-fill-mode: forwards;
 	animation-timing-function: linear;
 }
+
+@-webkit-keyframes progressive {
+    0% {top:100%;}
+    100% {top:0%;}
+}
+
 @-webkit-keyframes arrow {
     0% {}
     100% {top: 0px;}
@@ -64,6 +80,7 @@
 	animation-fill-mode: forwards;
 	animation-timing-function: linear;
 }
+
 @-webkit-keyframes prog {
     0% {}
     25% {color:$secondary;}
@@ -71,13 +88,18 @@
     75% {color:$primary;}
     100% {color:$white;}
 }
+@-webkit-keyframes button-newsletter {
+    0% {color:$secondary;left:5px;}
+    50% {color:$primary;left:10px;}
+    100% {color:$secondary;left:5px;}
+}
    
 @-webkit-keyframes banner-progressive {
     0% {}
-    100% {top:30%;}
+    100% {top:5vh;}
 }
 @-webkit-keyframes button-phone {
-    0% {}
+    0% {color:$primary;left:10px;}
     50% {color:$secondary;left:5px;}
     100% {color:$primary;left:10px;}
 }

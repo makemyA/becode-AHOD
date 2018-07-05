@@ -1,5 +1,6 @@
  const mq = window.matchMedia(("min-width:576px"));
- 
+ let startMenu = document.getElementById("start-menu");
+ let buttonEnter = document.getElementById("button-enter");
  let menu= document.getElementById("menu");
  let hide = document.querySelectorAll(".hide");
  let section = document.querySelectorAll(".section");
@@ -29,6 +30,19 @@
  let sectionProgressive = document.getElementById("section-progressive");
  let buttonPhone = document.getElementById("button-phone");
  let bannerProgressive = document.getElementById("banner-progressive");
+ let buttonNewsLetter = document.getElementById("button-newsletter");
+ let sectionNewsLetter = document.getElementById("section-newsletter");
+ buttonEnter.addEventListener("click", afficherSite);
+ function afficherSite(){
+     startMenu.classList.toggle("hide");
+     startMenu.classList.toggle("d-flex");
+     mainSection.classList.toggle("hide");
+     buttonNewsLetter.classList.toggle("hide");
+     buttonPhone.classList.toggle("hide");
+     buttonFooter.classList.toggle("hide");
+
+ }
+ buttonNewsLetter.addEventListener("click", afficherNewsLetter);
  buttonPhone.addEventListener("click",afficherPhone);
  buttonAgenda.addEventListener("click", clickAgenda); 
  buttonMenu.addEventListener("click", afficherMenu);
@@ -41,9 +55,15 @@
  buttonAgendaCard3.addEventListener("click",clickCard3);
  buttonAgendaCard4.addEventListener("click",clickCard4);
  buttonFooter.addEventListener("click", afficherProgressive);
+ function afficherNewsLetter(){
+     sectionNewsLetter.classList.toggle("hide");
+     mainSection.classList.toggle("flou");
+     
+ }
  function afficherProgressive(){
      mainSection.classList.toggle("hide");
      sectionProgressive.classList.toggle("hide");
+     buttonNewsLetter.classList.toggle("hide");
 
  }
  function afficherPhone(){
@@ -170,7 +190,14 @@ function loading(){
      menu.classList.toggle("out");
      footer.classList.toggle("down");
      sectionProgressive.classList.add("hide");
-     bannerProgressive.classList.toggle("hide"); 
+     bannerProgressive.classList.toggle("hide");
+     sectionNewsLetter.classList.toggle("hide");
+     mainSection.classList.toggle("hide");
+     buttonNewsLetter.classList.toggle("hide");
+     buttonPhone.classList.toggle("hide");
+     buttonFooter.classList.toggle("hide");
+     
+
    /*  menu.classList.toggle("show"); */
 }
 

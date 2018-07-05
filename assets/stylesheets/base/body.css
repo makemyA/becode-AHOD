@@ -1,1 +1,39 @@
 /*Body de base avec choix couleur*/
+/* $primary: #1E233E;
+$secondary: #D7293A; */
+/* $primary: #24292E;
+$secondary: rgb(89, 90, 90); */
+/*  rgba(215, 41, 58, 0.164); */
+body {
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto 0 auto;
+  background-color: #FFFFFF;
+  color: #1E233E;
+  font-family: 'Segoe', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+strong {
+  color: #D7293A;
+  font-weight: 700;
+}
+
+.container-fluid {
+  width: 100%;
+  margin: 0 auto 0 auto;
+  padding: 0;
+}
+
+.row {
+  width: 100%;
+  margin: 0 auto 0 auto;
+  padding: 0;
+}
+
+.hide {
+  display: none;
+}
+
+#main-section {
+  height: 100vh;
+}

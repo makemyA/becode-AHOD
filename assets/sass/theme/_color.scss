@@ -9,8 +9,14 @@ $black-github: #24292E;
 $secondary: #D7293A; */
 $primary:  #D7293A;
 $secondary: #1E233E;
+/* $primary: #24292E;
+$secondary: rgb(89, 90, 90); */
 $banner-small: url('../img/banner-phone--red.png');
 $banner-medium: url('../img/banner-medium.png');
 $transparent: transparent;
-$bg-color: rgba(215, 41, 58, 0.164);
+$bg-primary: $primary;
+$bg-secondary:$secondary;
+/*  rgba(215, 41, 58, 0.164); */
+
+
 

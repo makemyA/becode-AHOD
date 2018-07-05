@@ -1,0 +1,14 @@
+
+.banner-header {
+    @include banner-main($banner-small);
+}
+.banner-header::after{
+ @include circle();
+}
+
+.banner-header--hide {
+    display:none;
+}
+.circle {
+    @include circle-header();
+}

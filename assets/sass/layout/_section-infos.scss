@@ -1,0 +1,78 @@
+.section-title{
+    @include section-title($white,$primary,$font-title1);
+}
+.section--bg-color-secondary {
+        @include section($white,$secondary,$font-text1);
+       /*  @include circle-left(); */
+    }
+.section--bg-color-primary {
+        @include section($white,$primary,$font-text1);
+      /*   @include circle-right(); */
+    }
+.section--color-secondary {
+        @include section($secondary,$white,$font-text1);
+}
+.section--color-primary {
+    /* $color $bg-color $font */
+        @include section($primary,$white,$font-text1);
+}
+.border-left--secondary {
+    @include border-left($secondary,$font-text1);
+}
+.border-left--primary {
+    @include border-left($primary,$font-text1);
+}
+.border-right--secondary {
+    @include border-right($secondary,$font-text1);
+}
+.border-right--primary {
+    @include border-right($primary,$font-text1);
+}
+.card-title {
+    @include card-section-title($primary, $white,$font-title2);
+}
+.card-menu {
+    @include card-menu($white,$primary,$font-text3);
+}
+.card-text {
+    @include card-text($primary,$white,$font-text3);
+}
+.card-section {
+    @include section($secondary,$white,$font-text2);
+    opacity:0.95;
+}
+.card-img-top {
+    transform: scale(1);
+    width: 100%;
+    height: auto;
+    
+   
+}
+.btn {
+   @include card-button();
+   text-align: center;
+   border:none;
+}
+.btn:hover{
+    background-color: $secondary;
+    opacity:0.9;
+}
+.carousel-control-prev {
+/*    position: relative;
+   top: 0px; */
+   background-color: $secondary;
+   opacity: 0.4;
+   z-index: 500;
+   height: 3em;;
+}
+.carousel-control-next {
+    background-color: $primary;
+    opacity: 0.4;
+    z-index: 500;
+    height: 3em;;
+
+}
+#carouselExampleFade{
+    max-width: 700px;
+}
+

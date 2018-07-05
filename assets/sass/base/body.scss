@@ -1,14 +1,34 @@
 /*Body de base avec choix couleur*/
+@import "theme/color";
+body {
+   justify-content: center;
+   width: 100%;
+   margin: 0 auto 0 auto;
+   background-color:$white;
+   color: $secondary;
+   font-family: 'Segoe', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-@mixin body--color($color) {
-        /* display: flex; */
-        justify-content: center;
-        margin: 0 auto 0 auto;
-        /* background-color: $color; */
-        color: $primary;
-        font-family: 'Segoe', Tahoma, Geneva, Verdana, sans-serif;
+
+strong {
+    color:$primary;
+    font-weight: 700;
 }
-@mixin box--color($bg-color, $color) {
-    background-color: $bg-color;
-    color: $color;
+.container-fluid {
+    width:100%;
+    margin: 0 auto 0 auto;
+    padding: 0;
 }
+.row {
+    width:100%;
+    margin: 0 auto 0 auto;
+    padding: 0;
+}
+.hide {
+    display: none;
+  }
+#main-section {
+    height: 100vh;
+}
+    
+

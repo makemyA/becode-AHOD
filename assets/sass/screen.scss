@@ -4,13 +4,21 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 @import "compass/reset";
 @import "theme/color";
+@import "theme/font-size";
+@import "modules/mixins";
+@import "layout/section-start-menu";
+@import "animations/animations";
 @import "base/body";
-@import "modules/banner-main";
-@import "modules/menu";
-@import "layout/infos";
-@import "theme/font";
-@import "animations/anim-menu";
+@import "layout/section-infos";
+@import "layout/section-agenda";
+@import "layout/section-contact";
+@import "layout/section-ask-us";
 @import "layout/section-progressive";
+@import "layout/section-newsletter";
+@import "modules/header";
+@import "modules/footer";
+@import "modules/menu";
+@import "state/576up";
 @font-face {
     font-family: "Segoe";
     src: url("../sass/theme/Segoe\ UI.ttf") format("ttf");
@@ -23,50 +31,7 @@
 
 /* Reprendre l'architecture du BEM ici:*/
 
-
-body {
-    @include body--color($white);
-   
-}
-strong {
-    color:$primary;
-    font-weight: 700;
-}
-.container-fluid {
-    width:100%;
-    margin: 0 auto 0 auto;
-    padding: 0;
-}
-.row {
-    width:100%;
-    margin: 0 auto 0 auto;
-    padding: 0;
-}
-.hide {
-    display: none;
-  }
-/* .list-menu {
-   position: absolute;
-   top:0;
-   left:0;
-}  */
-
-#menu-contact img {
-    width:100%;
-}
-.banner-main {
-    @include banner-main($banner-small);
-}
-.banner-main::after{
- @include circle();
-}
-.banner-main--hide {
-    display:none;
-}
-
-.circle {
-    @include circle-header();
-}
+/*Définit le style et le comportement des boutons sur la page d'accueil */
 .button {
     text-align: center;
     color: $primary;
@@ -75,7 +40,6 @@ strong {
 .button:hover{
     @include button--hover(true);
 }
-
 img.logo {
     @include logo();
 
@@ -86,156 +50,36 @@ img.logo {
 .line {
     @include line();
 }
-.section-title{
-    @include section-title($white,$primary,$font-title1);
-}
-.section--bg-color-secondary {
-        @include section($white,$secondary,$font-text1);
-       /*  @include circle-left(); */
-    }
-.section--bg-color-primary {
-        @include section($white,$primary,$font-text1);
-      /*   @include circle-right(); */
-    }
-.section--color-secondary {
-        @include section($secondary,$white,$font-text1);
-}
-.section--color-primary {
-    /* $color $bg-color $font */
-        @include section($primary,$white,$font-text1);
-}
-.border-left--secondary {
-    @include border-left($secondary,$font-text1);
-}
-.border-left--primary {
-    @include border-left($primary,$font-text1);
-}
-.border-right--secondary {
-    @include border-right($secondary,$font-text1);
-}
-.border-right--primary {
-    @include border-right($primary,$font-text1);
-}
-.card-title {
-    @include card-section-title($primary, $white,$font-title2);
-}
-.card-menu {
-    @include card-menu($white,$primary,$font-text3);
-}
-.card-text {
-    @include card-text($primary,$white,$font-text3);
-}
-.card-section {
-    @include section($secondary,$white,$font-text2);
-    opacity:0.95;
-}
-.card-img-top {
-    transform: scale(1);
-    width: 100%;
-    height: auto;
-    
-   
-}
-.btn {
-   @include card-button();
-   text-align: center;
-   border:none;
-}
-.btn:hover{
-    background-color: $secondary;
-    opacity:0.9;
-}
-.carousel-control-prev {
-/*    position: relative;
-   top: 0px; */
-   background-color: $secondary;
-   opacity: 0.4;
-   z-index: 500;
-   height: 3em;;
-}
-.carousel-control-next {
-    background-color: $primary;
-    opacity: 0.4;
-    z-index: 500;
-    height: 3em;;
 
-}
-#carouselExampleFade{
-    max-width: 700px;
-}
 
-.news-letter {
-    /* $color $bg-color $font */
-    @include section-title($white,$secondary,$font-title1);
-    
-    letter-spacing: 0.3em;
-    line-height: 1.5em;
-}
 
-.form-control {
-    border: 1px solid $primary;
-    color: $secondary;
-}
-.circle-footer {
-justify-content: center;
-align-items: center;
-color: $white;
-padding:0;
-}
-.circle-footer-left {
-@include circle-footer-left();
-}
-.circle-footer-right {
-    @include circle-footer-right();
-}
-.line-left
-.line-right
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .box-logo {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
-#footer.up {
-    @include footer-up();
-}
-#footer.down {
-    @include footer-down();
-}
-.row--blue {
-    @include box--color($primary, $white)
+
+/* .row--blue {
+    @include box--color($bg-primary, $white)
 }
 .row--red {
-    @include box--color($secondary, $white)
+    @include box--color($bg-secondary, $white)
 }
-#image-contact {
-    max-width: 800px;
-}
-#map {
-    min-height: 300px;
-}
-#menu {
-    display:none;
-}
-    #button-menu {
-        color: $white;
-        position: fixed;
-        text-align: center;
-        top: 1%;
-        left: 0;
-        background-color: transparent;
-    
-     font-size: 2.5em;
-        max-width: 50px;
-        z-index: 100;
-        &:hover{
-            opacity:0.8;
-            font-size: 2.7em;
-        }
-    }
-    #button-menu.color-primary{
-        color: $primary;
-    }   
-#button-phone {
-    display:none;
-}
+ */
