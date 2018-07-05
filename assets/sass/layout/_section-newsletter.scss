@@ -19,13 +19,13 @@
 #section-newsletter {
     @include box--color($bg-primary,$white);
     position: fixed;
+    font-size: 0.8em;
     line-height: 3em;
     top:-50vh;
     left: 10vw;   
-    width: 80vw;
+    width: 80%;
+    margin: 0 auto 0 auto;
     max-width: 400px;
-    height: 50vh;
-    max-height: 500px;
     z-index:1000;
     animation-name: banner-progressive;
     animation-duration: 1s;
