@@ -1,3 +1,35 @@
+#banner-progressive {
+ position: fixed;
+ line-height: 3em;
+ top:-400px;
+ left: 35%;   
+ width: 400px;
+ height: 400px;
+ z-index:1000;
+ animation-name: banner-progressive;
+ animation-duration: 1s;
+ animation-iteration-count:1;
+ animation-delay:0;
+ animation-direction: normal;
+ animation-fill-mode: forwards;
+ animation-timing-function: linear;
+}
+#button-phone {
+    color: $primary;
+    position: fixed;
+    top:20%;
+    left: 10px;
+    font-size: 3em;
+    z-index: 100;
+ animation-name: button-phone;
+ animation-duration: 1.5s;
+ animation-iteration-count:infinite;
+ animation-delay:0;
+ animation-direction: normal;
+ animation-fill-mode: forwards;
+ animation-timing-function: linear;
+}
+    
 @mixin banner-main ($banner) {
     background-image:$banner;
     background-repeat: no-repeat;
@@ -82,37 +114,24 @@
    
 }
 
-@mixin footer-up() {
-    animation-name: up;
-    animation-duration: 0.5s;
-	animation-iteration-count:1;
-	animation-delay:0;
-	animation-direction: normal;
-	animation-fill-mode: forwards;
-	animation-timing-function: linear;
-}
-@mixin footer-down() {
-    animation-name: down;
-    animation-duration: 0.5s;
-	animation-iteration-count:1;
-	animation-delay:0;
-	animation-direction: normal;
-	animation-fill-mode: forwards;
-	animation-timing-function: linear;
-}
+
 #button-footer {
-    position: fixed;
-    color:$secondary;
-    font-size: 2em;
-    top:94%;
-    left:50%;
-    z-index: 500;
-    opacity: 0.8;
-    &:hover {
-        opacity:1;
-        top: 96%;
-        font-size:1.6em;
-    }
+    animation-name: prog;
+    animation-duration: 2s;
+	animation-iteration-count:infinite;
+	animation-delay:0;
+	animation-direction: normal;
+	animation-fill-mode: forwards;
+	animation-timing-function: linear;
+    color: $white;
+        position: fixed;
+        text-align: center;
+        top: 94%;
+        left: 47%;
+        background-color: transparent;
+        font-size: 2em;
+        max-width: 50px;
+        z-index: 100;
 }
 #footer {
     position: fixed;
@@ -121,14 +140,14 @@
     width: 100%;
 }
 #list-media {
-    width:50%;
+    width:70%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: flex-end;
     font-size: 2em;
     & li i {
-        justify-content: space-between;
+        justify-content: space-around;
         list-style: none;
     }
     & a {

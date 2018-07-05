@@ -27,7 +27,9 @@
  let buttonFooter = document.getElementById("button-footer");
  let mainSection = document.getElementById("main-section");
  let sectionProgressive = document.getElementById("section-progressive");
-
+ let buttonPhone = document.getElementById("button-phone");
+ let bannerProgressive = document.getElementById("banner-progressive");
+ buttonPhone.addEventListener("click",afficherPhone);
  buttonAgenda.addEventListener("click", clickAgenda); 
  buttonMenu.addEventListener("click", afficherMenu);
  buttonInfos.addEventListener("click", clickInfos);
@@ -42,6 +44,13 @@
  function afficherProgressive(){
      mainSection.classList.toggle("hide");
      sectionProgressive.classList.toggle("hide");
+
+ }
+ function afficherPhone(){
+    bannerProgressive.classList.toggle("hide");
+    mainSection.classList.toggle("flou");
+    /* mainSection.classList.toggle("hide");
+    sectionProgressive.classList.toggle("hide"); */
 
  }
 /*  footer.addEventListener("mouseover", mouseOver);
@@ -153,7 +162,8 @@ function loading(){
     menu.classList.add("hide");
      menu.classList.toggle("out");
      footer.classList.toggle("down");
-     sectionProgressive.classList.add("hide"); 
+     sectionProgressive.classList.add("hide");
+     bannerProgressive.classList.toggle("hide"); 
    /*  menu.classList.toggle("show"); */
 }
 

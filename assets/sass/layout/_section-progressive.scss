@@ -7,14 +7,14 @@
     line-height: 1.5em;
     & h1 {
         text-align: center;
-        line-height: 8em;
+    
         height:100%;
     }
     & .fa-arrow-up {
         position: fixed;
-        top:5px;
-        left:87%;
-        font-size: 2em;
+        top:1em;
+        right:0.1em;
+        font-size: 1.5em;
         color: $primary;
         @include arrow();
     }

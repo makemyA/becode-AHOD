@@ -10,14 +10,8 @@
     0% {left:-50px;}
     100% {left:-150px;}
 }
-@-webkit-keyframes up {
-    0% {}
-    100% {bottom: 0px;}
-}
-@-webkit-keyframes down {
-    0% {bottom: 0px;}
-    100% {bottom:-80px;}
-}
+
+
 @-webkit-keyframes progressive {
     0% {top:100%;}
     100% {top:0%;}
@@ -43,4 +37,47 @@
 	animation-direction: normal;
 	animation-fill-mode: forwards;
 	animation-timing-function: linear;
+}
+@-webkit-keyframes up {
+    0% {}
+    100% {bottom: 0px;}
+}
+@mixin footer-up() {
+    animation-name: up;
+    animation-duration: 0.5s;
+	animation-iteration-count:1;
+	animation-delay:0;
+	animation-direction: normal;
+	animation-fill-mode: forwards;
+	animation-timing-function: linear;
+}
+@-webkit-keyframes down {
+    0% {bottom: 0px;}
+    100% {bottom:-80px;}
+}
+@mixin footer-down() {
+    animation-name: down;
+    animation-duration: 0.5s;
+	animation-iteration-count:1;
+	animation-delay:0;
+	animation-direction: normal;
+	animation-fill-mode: forwards;
+	animation-timing-function: linear;
+}
+@-webkit-keyframes prog {
+    0% {}
+    25% {color:$secondary;}
+    50% {color:$white;}
+    75% {color:$primary;}
+    100% {color:$white;}
+}
+   
+@-webkit-keyframes banner-progressive {
+    0% {}
+    100% {top:30%;}
+}
+@-webkit-keyframes button-phone {
+    0% {}
+    50% {color:$secondary;left:5px;}
+    100% {color:$primary;left:10px;}
 }

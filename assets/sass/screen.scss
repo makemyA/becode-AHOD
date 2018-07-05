@@ -50,9 +50,7 @@ strong {
    top:0;
    left:0;
 }  */
-#button-menu{
-    display:none;
-}
+
 #menu-contact img {
     width:100%;
 }
@@ -215,4 +213,26 @@ padding:0;
 }
 #map {
     min-height: 300px;
+}
+#menu {
+    display:none;
+}
+    #button-menu {
+        color: $white;
+        position: fixed;
+        text-align: center;
+        top: 1%;
+        left: 0;
+        background-color: transparent;
+    
+     font-size: 2.5em;
+        max-width: 50px;
+        z-index: 100;
+        &:hover{
+            opacity:0.8;
+            font-size: 2.7em;
+        }
+    }   
+#button-phone {
+    display:none;
 }

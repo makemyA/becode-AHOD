@@ -12,21 +12,16 @@
         background-size: contain; */
         /* background-color: $bg-color; */
          
-    #button-menu {
-        color: $primary;
-        position: fixed;
-        text-align: center;
-        top: 40%;
-        left: 0;
-        background-color: transparent;
-     font-size: 2.5em;
-        max-width: 50px;
-        z-index: 100;
-        &:hover{
+        #button-menu.button-menu {
+            color: $primary;
+            top: 40%;
+            left: 5px;
             opacity:0.8;
-            font-size: 2.7em;
-        }
-    }   
+            &:hover{
+                opacity:1;
+                font-size: 2.5em;
+            }
+        }   
     #button-menu.fixed{
         @include button-menu();
     }
@@ -79,4 +74,23 @@ p.border-right--primary {
 }
 #news-letter::after {
     @include circle();
+}
+#button-footer{
+    display:none;
+}
+#section-progressive {
+    display: none;
+}
+#main-section {
+    display: inherit;
+    &.flou {
+        filter: grayscale(90%);
+         opacity: 0.7;
+    }
+}
+#menu.list-menu {
+    display: initial;
+}
+#button-phone.fa-mobile {
+    display:initial;
 }
