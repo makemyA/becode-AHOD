@@ -127,6 +127,7 @@ function afficherMenu() {
      buttonInfos.classList.toggle("hide");
      menuInfos.classList.toggle("hide");
      menuInfos.classList.toggle("d-flex");
+     buttonMenu.classList.toggle("color-primary");
    /*  banner.classList.add("hide");
     button.forEach(functionHide);
     buttonInfos.classList.remove("hide");
@@ -138,6 +139,8 @@ function afficherMenu() {
     buttonAgenda.classList.toggle("hide");
     menuAgenda.classList.toggle("hide");
     menuAgenda.classList.toggle("d-flex");
+    buttonMenu.classList.toggle("color-primary");
+
     /* agendaCards.forEach(toggleHide); */
    
  }
@@ -147,6 +150,8 @@ function afficherMenu() {
     buttonContact.classList.toggle("hide");
     menuContact.classList.toggle("hide");
     menuContact.classList.toggle("d-flex");
+    buttonMenu.classList.toggle("color-primary");
+
  }
  function clickAskUs(){
     banner.classList.toggle("hide");
@@ -154,6 +159,8 @@ function afficherMenu() {
     buttonAskUs.classList.toggle("hide");
     menuAskUs.classList.toggle("hide");
     menuAskUs.classList.toggle("d-flex");
+    buttonMenu.classList.toggle("color-primary");
+
  }
 
 function loading(){

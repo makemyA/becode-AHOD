@@ -936,6 +936,10 @@ img.logo {
   font-size: 2.7em;
 }
 
+#button-menu.color-primary {
+  color: #D7293A;
+}
+
 #button-phone {
   display: none;
 }
