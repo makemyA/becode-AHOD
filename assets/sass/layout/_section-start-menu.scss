@@ -1,5 +1,5 @@
 #start-menu {
-    position:fixed;
+    position:absolute;
     background-image: url("../../assets/img/atomium-opacity.jpg");
     background-repeat: repeat;
     background-size: contain;
@@ -16,10 +16,10 @@
 
 }
 #loading-text {
-    position:relative;
+    position:absolute;
     opacity:0;
     width: 100vw;
-    height:600px;
+    height:auto;
     animation-name: loading-text;
     animation-duration: 5s;
     animation-iteration-count:1;
@@ -30,10 +30,10 @@
 
 }
 #button-enter {
-    position: relative;
+    position: fixed;
     opacity:0;
-    top:0;
-    left:0;
+    top:10px;
+    left:15vw;
     max-width:180px;
     max-height: 40px;
     width:0px;

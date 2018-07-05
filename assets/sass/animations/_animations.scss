@@ -4,7 +4,8 @@
 }
 @-webkit-keyframes loading-text {
     0% {}
-    100% {opacity:1;}
+    90% {opacity:1;}
+    100% {opacity:0;}
 }
 @-webkit-keyframes button-enter {
     0% {display:flex;}

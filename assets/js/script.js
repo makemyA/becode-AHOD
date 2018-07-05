@@ -40,6 +40,7 @@
      buttonNewsLetter.classList.toggle("hide");
      buttonPhone.classList.toggle("hide");
      buttonFooter.classList.toggle("hide");
+     buttonMenu.classList.toggle("hide");
 
  }
  buttonNewsLetter.addEventListener("click", afficherNewsLetter);
@@ -196,6 +197,7 @@ function loading(){
      buttonNewsLetter.classList.toggle("hide");
      buttonPhone.classList.toggle("hide");
      buttonFooter.classList.toggle("hide");
+     buttonMenu.classList.toggle("hide");
      
 
    /*  menu.classList.toggle("show"); */
