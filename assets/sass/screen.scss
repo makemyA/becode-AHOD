@@ -6,6 +6,7 @@
 @import "theme/color";
 @import "theme/font-size";
 @import "modules/mixins";
+@import "modules/mixins-general";
 @import "layout/section-start-menu";
 @import "animations/animations";
 @import "base/body";
@@ -50,25 +51,6 @@ img.logo {
 .line {
     @include line();
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .box-logo {
     display: flex;
     justify-content: center;

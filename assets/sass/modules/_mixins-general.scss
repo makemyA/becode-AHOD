@@ -1,0 +1,125 @@
+//Display
+@mixin d-flex (){
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width:100vw;
+    height:100vh;
+    
+}
+@mixin border-box() {
+    background-color: rgba(255, 255, 255, 0.4);
+    border: 0.2px dotted rgba(255, 255, 255, 0.4);
+}
+//button
+@mixin button--start() {
+    display:flex;
+    font-size:1.2em;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 20vh;
+    left: 40vw;
+    color:$primary;
+    background-color: $white;
+    border-radius: 20px;
+    opacity:0;
+    max-width:150px;
+    max-height: 60px;
+    width:100%;
+    
+    height:auto;
+    cursor: pointer;
+}
+
+
+
+
+//header
+@mixin circle-header {
+    position: relative;
+    top: 90%;
+    left:33%;
+    border-radius: 50%;
+    width: 34%;
+    height: 100%;
+    background-color: white;
+    content:"";
+}
+@mixin banner-main ($banner) {
+    background-image:$banner;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 30vh;
+    border-radius: 0 0 0 40%;
+    margin:0;
+    padding:0;
+}
+//main
+@mixin box--color($bg-color, $color) {
+    background-color: $bg-color;
+    color: $color;
+    }
+@mixin section($color,$bg-color,$font){
+    font-size: $font;
+    line-height: 2em;
+    font-weight: 500;
+    color: $color;
+    background-color:$bg-color;
+}
+@mixin section-title($color,$bg-color,$font){
+    font-size: $font;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    color: $color;
+    background-color: $bg-color;
+    text-align: center;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+@mixin border-left($color,$font){
+    border-left: 2px solid $color;
+    padding: 0 2em 0 2em;
+    text-align: left;
+    font-size: $font;
+}
+/* $color $bg-color $font */
+@mixin copyright(){
+    text-transform: capitalize;
+    font-size: 0.6em;
+   
+}
+@mixin border-right($color,$font){
+    border-right: 2px solid $color;
+    padding: 0 2em 0 2em;
+    text-align: right;
+    font-size: $font;
+}
+//footer
+@mixin circle-footer-left {
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    height: 100px;
+    background: $primary;
+    color:$white;
+    border-top-left-radius: 100%; // 4*height
+    border-top-right-radius: 0%; // 4*height
+    margin:0;
+    padding:0;
+    opacity:0.9;
+}
+@mixin circle-footer-right {
+    
+    position: relative;
+    height: 100px;
+    background: $primary;
+    color:$white;
+    border-top-left-radius: 0%; // 4*height
+    border-top-right-radius: 100%; // 4*height
+    margin:0;
+    padding:0;
+    opacity:0.9;
+}

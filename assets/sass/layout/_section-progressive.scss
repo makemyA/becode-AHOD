@@ -41,9 +41,7 @@
    #button-phone {
        display:none;
        color: $primary;
-       position: fixed;
-       top:10%;
-       left: 10px;
+       position: relative;
        font-size: 3em;
        z-index: 100;
        cursor: pointer;

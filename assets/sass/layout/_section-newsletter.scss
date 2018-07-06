@@ -1,9 +1,7 @@
 #button-newsletter.fa-envelope-open {
     
        color: $secondary;
-       position: fixed;
-       top:25%;
-       left: 5px;
+       position: relative;
        font-size: 2.5em;
        z-index: 100;
        cursor: pointer;

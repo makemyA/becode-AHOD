@@ -1,5 +1,6 @@
  const mq = window.matchMedia(("min-width:576px"));
  let startMenu = document.getElementById("start-menu");
+ let loadingText = document.getElementById("loading-text");
  let buttonEnter = document.getElementById("button-enter");
  let menu= document.getElementById("menu");
  let hide = document.querySelectorAll(".hide");
@@ -32,6 +33,7 @@
  let bannerProgressive = document.getElementById("banner-progressive");
  let buttonNewsLetter = document.getElementById("button-newsletter");
  let sectionNewsLetter = document.getElementById("section-newsletter");
+ let boxCta = document.getElementById("box-cta");
  buttonEnter.addEventListener("click", afficherSite);
  function afficherSite(){
      startMenu.classList.toggle("hide");
@@ -41,6 +43,8 @@
      buttonPhone.classList.toggle("hide");
      buttonFooter.classList.toggle("hide");
      buttonMenu.classList.toggle("hide");
+     footer.classList.toggle("hide");
+     footer.classList.toggle("d-flex");
 
  }
  buttonNewsLetter.addEventListener("click", afficherNewsLetter);
@@ -122,9 +126,12 @@ function afficherMenu() {
     menu.classList.remove("hide");
     menu.classList.toggle("in");
     menu.classList.toggle("out");
-    buttonMenu.classList.toggle("fixed");
+   /*  buttonMenu.classList.toggle("fixed"); */
     footer.classList.toggle("up");
     footer.classList.toggle("down");
+    boxCta.classList.toggle("hide");
+    boxCta.classList.toggle("d-flex");
+    mainSection.classList.toggle("flou");
     
     
  }
@@ -161,9 +168,6 @@ function afficherMenu() {
     menuAgenda.classList.toggle("hide");
     menuAgenda.classList.toggle("d-flex");
     buttonMenu.classList.toggle("color-primary");
-
-    /* agendaCards.forEach(toggleHide); */
-   
  }
  function clickContact(){
     banner.classList.toggle("hide");
@@ -187,17 +191,22 @@ function afficherMenu() {
 function loading(){
     section.forEach(toggleHide);
     agendaCards.forEach(toggleHide);
-    menu.classList.add("hide");
+    /* menu.classList.add("hide"); */
      menu.classList.toggle("out");
      footer.classList.toggle("down");
+     footer.classList.toggle("hide");
+     footer.classList.toggle("d-flex");
      sectionProgressive.classList.add("hide");
      bannerProgressive.classList.toggle("hide");
      sectionNewsLetter.classList.toggle("hide");
      mainSection.classList.toggle("hide");
-     buttonNewsLetter.classList.toggle("hide");
-     buttonPhone.classList.toggle("hide");
-     buttonFooter.classList.toggle("hide");
-     buttonMenu.classList.toggle("hide");
+     boxCta.classList.toggle("hide");
+     boxCta.classList.toggle("d-flex");
+
+    /*  buttonNewsLetter.classList.toggle("hide"); */
+     /* buttonPhone.classList.toggle("hide"); */
+     /* buttonFooter.classList.toggle("hide"); */
+    /* buttonMenu.classList.remove("hide"); */
      
 
    /*  menu.classList.toggle("show"); */

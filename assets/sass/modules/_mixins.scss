@@ -1,8 +1,5 @@
 
-@mixin box--color($bg-color, $color) {
-background-color: $bg-color;
-color: $color;
-}
+
 @mixin in(){
     animation-name: in;
     animation-duration: 0.3s;
@@ -22,8 +19,6 @@ color: $color;
     animation-timing-function: linear; 
 }
 
-
-
 @mixin menu-title () {
 font-size:1.4em;
 font-weight: 550;
@@ -37,10 +32,7 @@ flex:100%;
 
 @mixin button--hover($hover) {
 @if $hover== true {
-
-
 transition: all 0.3s ease 0s;
-
 opacity: 0.8;
 background-color: $secondary;
 color:$white;
@@ -57,10 +49,7 @@ border-radius: 50%;
 }
 }
 @if $hover== false {
-
-
 transition: all 0.3s ease 0s;
-
 opacity: 1;
 background-color: white;
 color:$primary;
@@ -122,16 +111,7 @@ background-color: white;
  content:"";
 }
 
-@mixin banner-main ($banner) {
-    background-image:$banner;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 30vh;
-    border-radius: 0 0 0 40%;
-    margin:0;
-    padding:0;
-}
+
 @mixin button-menu () {
     
     animation-name: fixedWhite;
@@ -148,74 +128,8 @@ background-color: white;
     color:$secondary;
     opacity:0.8;
 }
-@mixin circle-header {
-    position: relative;
-    top: 90%;
-    left:33%;
-    border-radius: 50%;
-    width: 34%;
-    height: 100%;
-    background-color: white;
-    content:"";
-}
 
-@mixin circle-footer-left {
-    justify-content: flex-end;
-    align-items: center;
-    position: relative;
-    /* top: 40px;
-    border-radius: 50%;
-    border-top: 100px solid $primary;
-    color: $white;
-    background-color: $primary;
-    content:"";
-} */
-    height: 100px;
-   // 2*height
-    background: $primary;
-    color:$white;
-    border-top-left-radius: 100%; // 4*height
-    border-top-right-radius: 0%; // 4*height
-    margin:0;
-    padding:0;
-    opacity:0.9;
-}
-@mixin circle-footer-right {
-    
-    position: relative;
-    /* top: 40px;
-    border-radius: 50%;
-    border-top: 100px solid $primary;
-    color: $white;
-    background-color: $primary;
-    content:"";
-} */
-    height: 100px;
-   // 2*height
-    background: $primary;
-    color:$white;
-    border-top-left-radius: 0%; // 4*height
-    border-top-right-radius: 100%; // 4*height
-    margin:0;
-    padding:0;
-    opacity:0.9;
-}
-@mixin copyright(){
-    text-transform: capitalize;
-    font-size: 0.6em;
-   
-}
-@mixin section-title($color,$bg-color,$font){
-    font-size: $font;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.4em;
-    color: $color;
-    background-color: $bg-color;
-    text-align: center;
-    padding: 1em;
-    margin-bottom: 1em;
-}
+
 /* $color $bg-color $font */
 @mixin card-section-title($color,$bg-color,$font){
     font-size: $font;
@@ -267,24 +181,6 @@ background-color: white;
     border-radius: 45px;
 }
 /* $color $bg-color $font */
-@mixin section($color,$bg-color,$font){
-    font-size: $font;
-    line-height: 2em;
-    font-weight: 500;
-    color: $color;
-    background-color:$bg-color;
-}
+
 /* $color $font */
-@mixin border-left($color,$font){
-    border-left: 2px solid $color;
-    padding: 0 2em 0 2em;
-    text-align: left;
-    font-size: $font;
-}
-/* $color $bg-color $font */
-@mixin border-right($color,$font){
-    border-right: 2px solid $color;
-    padding: 0 2em 0 2em;
-    text-align: right;
-    font-size: $font;
-}
+
