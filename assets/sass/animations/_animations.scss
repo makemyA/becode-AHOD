@@ -4,11 +4,11 @@
 }
 @-webkit-keyframes loading-text {
     0% {opacity:0;}
-    99% {opacity:1;width: 100vw;height:100vh;}
+    99% {opacity:1;width: 50vw;height:100vh;}
     100% {opacity:0;width:0vw;height:0vh;}
 }
 @-webkit-keyframes button-enter {
-    0% {}
+    0% {width:0;}
     100% {opacity:1; width:100%; height: auto;}
 }
 @-webkit-keyframes button-enter2 {
