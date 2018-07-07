@@ -8,13 +8,13 @@ body {
   justify-content: center;
   width: 100vw;
   margin: 0 auto 0 auto;
-  background-color: #FFFFFF;
-  color: #1E233E;
+  background-color: white;
+  color: #1e233e;
   font-family: 'Segoe', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 strong {
-  color: #D7293A;
+  color: #d7293a;
   font-weight: 700;
 }
 

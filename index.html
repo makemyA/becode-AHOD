@@ -17,7 +17,7 @@
     <title>Document</title>
 </head>
 
-<body>
+<body id="body">
         <i id="button-menu"class="d-sm-flex fas fa-align-left button-menu p-1 col-2"></i>
     <!--  éléments hors champs principal -->
     <div class="container-fluid">
@@ -38,35 +38,24 @@
     </div>   
 
     <div id="section-progressive" class="container-fluid">
-    <div class= "row">
-        <div class="offset-1 col-5  mt-2 pt-3"> <strong>Tap on</strong> menu button </div>
-        <div class="col-5 mt-2 pt-3"> <small>then, <strong>add to </strong>homescreen</small></div>
-        <div class=" col-12 section-title mt-5">
-            <h1 class="col-12">
+        <div class= "row">
+            <div class="offset-1 col-5  mt-2 pt-3"> <strong>Tap on</strong> menu button </div>
+            <div class="col-5 mt-2 pt-3"> <small>then, <strong>add to </strong>homescreen</small></div>
+            <div class=" col-12 section-title mt-5">
+                <h1 class="col-12">
                 <div class="py-5">Telechargez</div>
                 <div class="py-5">notre</div>
                 <div class="py-5">appli</div>
                 <div class="py-5">mobile</div>
 
-            </h1>
+                </h1>
             <div><i class="fas fa-arrow-up"></i></div>
-        </div> 
-            
+            </div>   
+        </div>
     </div>
     <div id="banner-progressive">
             <h1 class="section-title">Veuillez regarder ce site depuis votre téléphone afin de pouvoir installer notre application mobile</h1>
         </div>
-
-        
-        <ul id="menu" class="list-menu">
-                
-                <li class="py-2"><a id="button-home"href="#banner-main">HOME</a></li>
-                <li class="py-2"><a href="#button-infos">Info</a></li>
-                <li class="py-2"><a href="#button-agenda">Agenda</a></li>
-                <li class="py-2"><a href="#button-contact">Contact</a></li>
-                <li class="py-2"><a href="#button-ask-us">Ask Us</a></li>
-        </ul>
-    </div>
 
     <div id="start-menu" class="d-flex justify-content-center align-items-center container-fluid ">
 
@@ -83,10 +72,20 @@
         </div>
     </div>
     <div id="box-cta" class="d-flex">
-            <h2>Menu interactif</h2>           
-            <i id ="button-newsletter"class=" button fas fa-envelope-open"></i>
+           <!--  <h2>Menu interactif</h2> -->
+        <div id="box-button-cta" class="d-flex flex-column">          
+            <i id ="button-newsletter"class="button fas fa-envelope-open"></i>
             <i id="button-phone" class="button fas fa-mobile"></i>
             <i id="button-footer" class="button progressive fas fa-mobile-alt"></i> 
+        </div> 
+        <ul id="menu" class=" d-flex mx-3 mb-4">
+                
+                <li class="py-3"><a id="button-home" class="button-menu"href="#banner-main">HOME</a></li>
+                <li class="py-3"><a id ="button-infos-menu"class="button-menu" href="#button-infos">Info</a></li>
+                <li class="py-3"><a id ="button-agenda-menu"class="button-menu" href="#button-agenda">Agenda</a></li>
+                <li class="py-3"><a id ="button-contact-menu"class="button-menu" href="#button-contact">Contact</a></li>
+                <li class="py-3"><a id ="button-askus-menu"class="button-menu" href="#button-ask-us">Ask Us</a></li>
+        </ul>
 
     </div>
 

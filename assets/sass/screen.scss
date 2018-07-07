@@ -39,7 +39,7 @@
   
 }
 .button:hover{
-    @include button--hover(true);
+    @include button--hover(false);
 }
 img.logo {
     @include logo();

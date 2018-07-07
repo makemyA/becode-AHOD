@@ -7,8 +7,8 @@ $red-youtube:	#FF0000;
 $black-github: #24292E;
 /* $primary: #1E233E;
 $secondary: #D7293A; */
-$primary:  #D7293A;
-$secondary: #1E233E;
+$primary:  rgba(215, 41, 58,1);
+$secondary: rgba(30, 35, 62,1);
 /* $primary: #24292E;
 $secondary: rgb(89, 90, 90); */
 $banner-small: url('../img/banner-phone--red.png');
@@ -16,6 +16,7 @@ $banner-medium: url('../img/banner-medium.png');
 $transparent: transparent;
 $bg-primary: $primary;
 $bg-secondary:$secondary;
+$bg-body: white;
 /*  rgba(215, 41, 58, 0.164); */
 
 

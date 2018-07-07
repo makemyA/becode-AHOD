@@ -3,6 +3,7 @@
     position: absolute;
     @include progressive();
     height:100vh;
+    width:100vw;
     background-color: white;
     color: $secondary;
     line-height: 1.5em;
@@ -41,6 +42,7 @@
    #button-phone {
        display:none;
        color: $primary;
+       background-color: transparent;
        position: relative;
        font-size: 3em;
        z-index: 100;
@@ -55,7 +57,8 @@
    }
    #main-section {
     &.flou {
-        filter: grayscale(90%);
+        filter: grayscale(90%) blur(1px);
          opacity: 0.7;
+
     }
 }

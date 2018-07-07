@@ -3,14 +3,15 @@
        &.start-menu{
        background-repeat: no-repeat;
        background-size: cover;
+      
        font-size: 4em;
        line-height: 3em;
        }
    }
-        body {
-           width: 80vw;
-        }
-    #button-menu.button-menu {
+    /*     body {
+           width: 80%;
+        } */
+    /* #button-menu.button-menu {
         color: $primary;
         top: 40%;
         left: 5px;
@@ -20,17 +21,17 @@
             font-size: 2.5em;
         }
     }   
-    #button-menu.fixed{
+    /* #button-menu.fixed{
         @include button-menu();
-    }
-    #menu.in {
+    } */
+  /*   #menu.in {
         @include in();
 
     }
     #menu.out{
         @include out();
-    }
-    #banner-main {
+    } */
+    #banner-main.banner-header {
         @include banner-main($banner-medium);
         
         

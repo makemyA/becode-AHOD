@@ -1,62 +1,59 @@
 #menu{
-    display:none;
     list-style: none;
-    padding: 0;
-    margin:0;
-    padding-top: 2em;
-    width: 120px;
+    padding:0;
+    margin:0 1em 0 1em;
+   flex: 60%;
+   max-width: 100px;
     justify-content: space-around;
+    align-items: flex-start;
     flex-direction: column;
-    position: fixed;
-    z-index: 90;
-    top:40%;
-    color: white;
-    background-color: $secondary;
-    font-size: 1.4em;
-}
-#menu #button-home{
-    color:$primary;
-    font-weight:900;
-    &:hover{
-        color:white;
-    }
+    z-index: 5000;
+    color: $primary;
+    background-color: $primary;
+   /*  font-size: 1.4em; */
+   font-size: 100%;
+  
 }
 #menu li {
-    text-align: center;
-    padding:0;
+    text-align: left;
+   
 }
 #menu a {
     text-decoration: none;
-    color:white;
-    padding:0;
+    color:$white;
+    padding:0 10px 0 10px;
+    &:hover{
+        color:$secondary;
+        font-weight: 700;
+    }
 }
 
-#menu:hover {
-  /*   background-color: $primary; */
-   & a:hover {
-    color: $primary;
-   }
-}
 
 #button-menu {
-    color: $white;
+    color: $primary;
     position: fixed;
     text-align: center;
-    top: 1%;
-    left: 0;
+    top: 40%;
+    left: 5px;
     background-color: transparent;
-
+    opacity:0.8;
     font-size: 2.5em;
     max-width: 50px;
-    z-index: 1000;
+    z-index: 10000;
     &:hover{
-        opacity:0.8;
-        font-size: 2.7em;
+        opacity:1;
+       
     }
 }
 #button-menu.color-primary{
     color: $primary;
 }   
 
+#menu.in {
+    @include in();
 
+}
+#menu.out{
+    @include out();
+}
 

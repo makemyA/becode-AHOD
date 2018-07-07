@@ -15,6 +15,10 @@
     0% {opacity:1;}
     100% {opacity:0.4;}
 }
+@-webkit-keyframes box-cta {
+    0% {left:-50px;}
+    100% {left:0;}
+}
 @-webkit-keyframes fixedWhite {
     0% {}
     100% {color: white;}
@@ -90,9 +94,9 @@
     100% {color:$white;}
 }
 @-webkit-keyframes button-newsletter {
-    0% {color:$secondary;left:5px;}
-    50% {color:$primary;left:10px;}
-    100% {color:$secondary;left:5px;}
+    0% {color:$secondary;left:0px;}
+    50% {color:$primary;left:5px;}
+    100% {color:$secondary;left:0px;}
 }
    
 @-webkit-keyframes banner-progressive {
@@ -100,7 +104,7 @@
     100% {top:5vh;}
 }
 @-webkit-keyframes button-phone {
-    0% {color:$primary;left:10px;}
+    0% {color:$primary;left:0px;}
     50% {color:$secondary;left:5px;}
-    100% {color:$primary;left:10px;}
+    100% {color:$primary;left: 0px;}
 }

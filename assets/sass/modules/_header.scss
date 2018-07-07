@@ -12,3 +12,11 @@
 .circle {
     @include circle-header();
 }
+
+#banner-main {
+    @include banner-main($banner-small);
+}
+  .button.hide.fas {
+    display: flex;
+    justify-content: center;
+}

@@ -1,19 +1,18 @@
+
 #button-footer {
-    animation-name: prog;
-    animation-duration: 2s;
-	animation-iteration-count:infinite;
-	animation-delay:0;
-	animation-direction: normal;
-	animation-fill-mode: forwards;
-	animation-timing-function: linear;
-    color: $white;
-    cursor:pointer;
-        position: relative;
-        text-align: center;
-        background-color: transparent;
-        font-size: 2em;
-        max-width: 50px;
-        z-index: 100;
+    color: $primary;
+    background-color: transparent;
+    position: relative;
+    font-size: 3em;
+    z-index: 100;
+    cursor: pointer;
+ animation-name: button-phone;
+ animation-duration: 1.5s;
+ animation-iteration-count:infinite;
+ animation-delay:0;
+ animation-direction: alternate;
+ animation-fill-mode: none;
+ animation-timing-function: linear;
 }
 #footer {
     position: fixed;

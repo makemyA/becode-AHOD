@@ -1,4 +1,7 @@
  const mq = window.matchMedia(("min-width:576px"));
+ let body = document.getElementById("body");
+ let styleBody= getComputedStyle(document.getElementById("body"));
+ let styleProgressive = getComputedStyle(document.getElementById("section-progressive"));
  let startMenu = document.getElementById("start-menu");
  let loadingText = document.getElementById("loading-text");
  let buttonEnter = document.getElementById("button-enter");
@@ -8,13 +11,23 @@
  let button = document.querySelectorAll(".button");
  let banner = document.getElementById("banner-main");
  let buttonMenu = document.getElementById("button-menu");
+ let buttonHome = document.getElementById("button-home");
  let buttonInfos = document.getElementById("button-infos");
+ let buttonInfosMenu = document.getElementById("button-infos-menu");
+
  let menuInfos= document.getElementById("menu-infos");
  let buttonAgenda = document.getElementById("button-agenda");
+ let buttonAgendaMenu = document.getElementById("button-agenda-menu");
+
  let menuAgenda= document.getElementById("menu-agenda");
  let buttonContact = document.getElementById("button-contact");
+ let buttonContactMenu = document.getElementById("button-contact-menu");
+
+
  let menuContact= document.getElementById("menu-contact");
  let buttonAskUs = document.getElementById("button-ask-us");
+ let buttonAskUsMenu = document.getElementById("button-askus-menu");
+
  let menuAskUs= document.getElementById("menu-ask-us");
  let agendaCards= document.querySelectorAll(".agenda-card");
  let agendaCard1= document.getElementById("agenda-card-1");
@@ -35,6 +48,34 @@
  let sectionNewsLetter = document.getElementById("section-newsletter");
  let boxCta = document.getElementById("box-cta");
  buttonEnter.addEventListener("click", afficherSite);
+ function setBodyWidthSmall(){
+     body.style.width="90vw";
+ }
+ function setBodyWidthLarge(){
+    body.style.width="80vw";
+}
+function setBody(){
+    if(styleBody.width < '576px'){
+        setBodyWidthSmall();
+      }else{
+         setBodyWidthLarge();
+      }
+}
+function returnHome(){
+    if(styleBody.width<'576px'){
+        body.style.width="100vw";
+     }else {
+         setBodyWidthLarge();
+     }
+}
+function resize(){
+    if (styleBody.width<'575px'){
+        body.style.width="100vw";
+}else {
+    setBody();
+}
+}
+
  function afficherSite(){
      startMenu.classList.toggle("hide");
      startMenu.classList.toggle("d-flex");
@@ -42,11 +83,13 @@
      buttonNewsLetter.classList.toggle("hide");
      buttonPhone.classList.toggle("hide");
      buttonFooter.classList.toggle("hide");
-     buttonMenu.classList.toggle("hide");
+    /*  buttonMenu.classList.toggle("hide"); */
      footer.classList.toggle("hide");
      footer.classList.toggle("d-flex");
+    resize();
+     }
+     
 
- }
  buttonNewsLetter.addEventListener("click", afficherNewsLetter);
  buttonPhone.addEventListener("click",afficherPhone);
  buttonAgenda.addEventListener("click", clickAgenda); 
@@ -54,12 +97,28 @@
  buttonInfos.addEventListener("click", clickInfos);
  buttonContact.addEventListener("click",clickContact);
  buttonAskUs.addEventListener("click",clickAskUs);
+ buttonHome.addEventListener("click",returnMenu);
+ buttonInfosMenu.addEventListener("click",clickInfosMenu);
+ buttonAgendaMenu.addEventListener("click",clickAgendaMenu);
+ buttonContactMenu.addEventListener("click",clickContactMenu);
+ buttonAskUsMenu.addEventListener("click",clickAskUsMenu);
  button.forEach(functionShow);
  buttonAgendaCard1.addEventListener("click",clickCard1);
  buttonAgendaCard2.addEventListener("click",clickCard2);
  buttonAgendaCard3.addEventListener("click",clickCard3);
  buttonAgendaCard4.addEventListener("click",clickCard4);
  buttonFooter.addEventListener("click", afficherProgressive);
+ footer.addEventListener("mouseover",afficherFooter);
+ footer.addEventListener("mouseleave",cacherFooter);
+function afficherFooter(){
+    footer.classList.remove("down"); 
+    footer.classList.add("up"); 
+}
+function cacherFooter(){
+    footer.classList.remove("up"); 
+    footer.classList.add("down");
+}
+
  function afficherNewsLetter(){
      sectionNewsLetter.classList.toggle("hide");
      mainSection.classList.toggle("flou");
@@ -69,6 +128,15 @@
      mainSection.classList.toggle("hide");
      sectionProgressive.classList.toggle("hide");
      buttonNewsLetter.classList.toggle("hide");
+     resize();
+     console.log(styleProgressive.width);
+     console.log(styleBody.width);
+     /*  if(styleProgressive.width>styleBody.width) {
+        body.style.width="100vw";
+      }else {
+          setBody();
+      } */
+    
 
  }
  function afficherPhone(){
@@ -121,17 +189,28 @@ function toggleHide(item){
 function toggleFlex(item){
     item=item.classList.toggle("d-flex");
 }
+function addHide(item){
+    item=item.classList.add("hide");
+}
+function removeHide(item){
+    item=item.classList.remove("hide");
+}
+function addFlex(item){
+    item=item.classList.add("d-flex");
+}
+function removeFlex(item){
+    item=item.classList.remove("d-flex");
+}
 function afficherMenu() {
     
     menu.classList.remove("hide");
     menu.classList.toggle("in");
     menu.classList.toggle("out");
    /*  buttonMenu.classList.toggle("fixed"); */
-    footer.classList.toggle("up");
-    footer.classList.toggle("down");
     boxCta.classList.toggle("hide");
     boxCta.classList.toggle("d-flex");
-    mainSection.classList.toggle("flou");
+    /* resize(); */
+   /*  mainSection.classList.toggle("flou"); */
     
     
  }
@@ -149,34 +228,75 @@ function afficherMenu() {
    /*   }else{
      // window width is less than 500px
      } */
+ function returnMenu(){
+     banner.classList.remove("hide");
+     button.forEach(removeHide);
+     section.forEach(removeFlex);
+     section.forEach(addHide);
+     returnHome();
+     resize();
+ }    
  function clickInfos() {
      banner.classList.toggle("hide");
      button.forEach(toggleHide);
      buttonInfos.classList.toggle("hide");
      menuInfos.classList.toggle("hide");
      menuInfos.classList.toggle("d-flex");
-     buttonMenu.classList.toggle("color-primary");
-   /*  banner.classList.add("hide");
+     setBody();
+     /* buttonMenu.classList.toggle("color-primary"); */
+   
+   
+     /*  banner.classList.add("hide");
     button.forEach(functionHide);
     buttonInfos.classList.remove("hide");
     menuInfos.classList.remove("hide"); */
  }
+ function clickInfosMenu() {
+    banner.classList.add("hide");
+    button.forEach(addHide);
+    buttonInfos.classList.toggle("hide");
+    section.forEach(addHide);
+    section.forEach(removeFlex);
+    menuInfos.classList.toggle("hide");
+    menuInfos.classList.toggle("d-flex");
+    setBody();
+}
  function clickAgenda(){
     banner.classList.toggle("hide");
     button.forEach(toggleHide);
     buttonAgenda.classList.toggle("hide");
     menuAgenda.classList.toggle("hide");
     menuAgenda.classList.toggle("d-flex");
-    buttonMenu.classList.toggle("color-primary");
+    setBody();
  }
+ function clickAgendaMenu(){
+    banner.classList.add("hide");
+    button.forEach(addHide);
+    buttonAgenda.classList.toggle("hide");
+    section.forEach(addHide);
+    section.forEach(removeFlex);
+    menuAgenda.classList.toggle("hide");
+    menuAgenda.classList.toggle("d-flex");
+    setBody();
+ }
+
  function clickContact(){
     banner.classList.toggle("hide");
     button.forEach(toggleHide);
     buttonContact.classList.toggle("hide");
     menuContact.classList.toggle("hide");
     menuContact.classList.toggle("d-flex");
-    buttonMenu.classList.toggle("color-primary");
-
+    setBody();
+ }
+ function clickContactMenu(){
+    banner.classList.add("hide");
+    button.forEach(addHide);
+    buttonContact.classList.toggle("hide");
+    section.forEach(addHide);
+    section.forEach(removeFlex);
+    menuContact.classList.toggle("hide");
+    menuContact.classList.toggle("d-flex");
+    setBody();
  }
  function clickAskUs(){
     banner.classList.toggle("hide");
@@ -184,8 +304,17 @@ function afficherMenu() {
     buttonAskUs.classList.toggle("hide");
     menuAskUs.classList.toggle("hide");
     menuAskUs.classList.toggle("d-flex");
-    buttonMenu.classList.toggle("color-primary");
-
+    setBody();
+ }
+ function clickAskUsMenu(){
+    banner.classList.add("hide");
+    button.forEach(addHide);
+    buttonAskUs.classList.toggle("hide");
+    section.forEach(addHide);
+    section.forEach(removeFlex);
+    menuAskUs.classList.toggle("hide");
+    menuAskUs.classList.toggle("d-flex");
+    setBody();
  }
 
 function loading(){
@@ -213,3 +342,5 @@ function loading(){
 }
 
 loading();
+console.log(styleBody.width);
+console.log(styleProgressive.width);
