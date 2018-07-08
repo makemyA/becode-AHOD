@@ -99,8 +99,10 @@ $secondary: rgb(89, 90, 90); */
   flex-wrap: wrap;
   width: 100vw;
   height: 100vh;
+  position: absolute;
   width: 50vw;
   height: 100vh;
+  font-size: 1.5em;
   margin: 0 auto 0 auto;
   background-color: transparent;
   animation-name: loading-text;
@@ -110,6 +112,90 @@ $secondary: rgb(89, 90, 90); */
   animation-direction: normal;
   animation-fill-mode: forwards;
   animation-timing-function: linear;
+}
+
+#loading-box {
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  top: 15vh;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  z-index: 1000;
+  width: 80vw;
+  height: 15vh;
+  /*  font-size: 1em; */
+  background-color: transparent;
+  animation-name: loading-box;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-delay: 5.5s;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+#loading-box .loading-box {
+  margin: 5px;
+  flex: 20%;
+  border: 1px solid #FFFFFF;
+  width: 20px;
+  max-width: 40px;
+  height: 20px;
+  max-height: 40px;
+  position: relative;
+}
+
+#box1 {
+  animation-name: box1,box1down;
+  animation-duration: 1s,2s;
+  animation-iteration-count: 1,infinite;
+  animation-delay: 1s,6s;
+  animation-direction: normal,alternate;
+  animation-fill-mode: forwards,none;
+  animation-timing-function: linear,linear;
+}
+
+#box2 {
+  animation-name: box2,box2down;
+  animation-duration: 1s,2s;
+  animation-iteration-count: 1,infinite;
+  animation-delay: 2s,6s;
+  animation-direction: normal, alternate;
+  animation-fill-mode: forwards, none;
+  animation-timing-function: linear,linear;
+}
+
+#box3 {
+  animation-name: box3,box3down;
+  animation-duration: 1s,2s;
+  animation-iteration-count: 1,infinite;
+  animation-delay: 3s,6s;
+  animation-direction: normal,alternate;
+  animation-fill-mode: forwards,none;
+  animation-timing-function: linear,linear;
+}
+
+#box4 {
+  animation-name: box4,box4down;
+  animation-duration: 1s,2s;
+  animation-iteration-count: 1,infinite;
+  animation-delay: 4s,6s;
+  animation-direction: normal,alternate;
+  animation-fill-mode: forwards,none;
+  animation-timing-function: linear,linear;
+}
+
+#box5 {
+  animation-name: box5,box5down;
+  animation-duration: 1s,2s;
+  animation-iteration-count: 1,infinite;
+  animation-delay: 5s,6s;
+  animation-direction: normal,alternate;
+  animation-fill-mode: forwards,none;
+  animation-timing-function: linear,linear;
 }
 
 #button-enter {
@@ -230,6 +316,111 @@ $secondary: rgb(89, 90, 90); */
     opacity: 0;
     width: 0vw;
     height: 0vh;
+  }
+}
+@-webkit-keyframes box1 {
+  0% {
+    background-color: transparent;
+    border: white;
+  }
+  100% {
+    background-color: #d7293a;
+    border: transparent;
+  }
+}
+@-webkit-keyframes box2 {
+  0% {
+    background-color: transparent;
+    border: white;
+  }
+  100% {
+    background-color: #d7293a;
+    border: transparent;
+  }
+}
+@-webkit-keyframes box3 {
+  0% {
+    background-color: transparent;
+    border: white;
+  }
+  100% {
+    background-color: #d7293a;
+    border: transparent;
+  }
+}
+@-webkit-keyframes box4 {
+  0% {
+    background-color: transparent;
+    border: white;
+  }
+  100% {
+    background-color: #d7293a;
+    border: transparent;
+  }
+}
+@-webkit-keyframes box5 {
+  0% {
+    background-color: transparent;
+    border: white;
+  }
+  100% {
+    background-color: #d7293a;
+    border: transparent;
+  }
+}
+@-webkit-keyframes box1down {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: -5vh;
+  }
+  100% {
+    top: 0;
+  }
+}
+@-webkit-keyframes box2down {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 5vh;
+  }
+  100% {
+    top: 0;
+  }
+}
+@-webkit-keyframes box3down {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: -5vh;
+  }
+  100% {
+    top: 0;
+  }
+}
+@-webkit-keyframes box4down {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 5vh;
+  }
+  100% {
+    top: 0;
+  }
+}
+@-webkit-keyframes box5down {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: -5vh;
+  }
+  100% {
+    top: 0;
   }
 }
 @-webkit-keyframes button-enter {

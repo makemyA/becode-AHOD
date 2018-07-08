@@ -19,8 +19,10 @@
 #loading-text {
   /*   position:relative; */
   @include d-flex;
+  position: absolute;
     width: 50vw;
     height:100vh;
+    font-size: 1.5em;
     margin: 0 auto 0 auto;
     background-color: transparent;
     animation-name: loading-text;
@@ -30,8 +32,83 @@
     animation-direction:normal;
     animation-fill-mode: forwards;
     animation-timing-function: linear;
-
 }
+#loading-box {
+    @include d-flex;
+    position: relative;
+    top:15vh;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    z-index: 1000;
+    width: 80vw;
+    height:15vh;
+   /*  font-size: 1em; */
+    background-color: transparent;
+    animation-name: loading-box;
+    animation-duration: 1s;
+    animation-iteration-count:1;
+    animation-delay:5.5s;
+    animation-direction:normal;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    & .loading-box {
+        margin: 5px;
+        flex:20%;
+        border: 1px solid $white;
+        width: 20px;
+        max-width: 40px;
+        height:20px;
+        max-height: 40px;
+        position: relative;
+    }
+}
+#box1 {
+    
+    animation-name: box1,box1down;
+    animation-duration: 1s,2s;
+    animation-iteration-count:1,infinite;
+    animation-delay:1s,6s;
+    animation-direction:normal,alternate;
+    animation-fill-mode: forwards,none;
+    animation-timing-function: linear,linear;
+}
+#box2 {
+    animation-name: box2,box2down;
+    animation-duration: 1s,2s;
+    animation-iteration-count:1,infinite;
+    animation-delay:2s,6s;
+    animation-direction:normal, alternate;
+    animation-fill-mode: forwards, none;
+    animation-timing-function: linear,linear;
+}
+#box3 {
+    animation-name: box3,box3down;
+    animation-duration: 1s,2s;
+    animation-iteration-count:1,infinite;
+    animation-delay:3s,6s;
+    animation-direction:normal,alternate;
+    animation-fill-mode: forwards,none;
+    animation-timing-function: linear,linear;
+}
+#box4 {
+    animation-name: box4,box4down;
+    animation-duration: 1s,2s;
+    animation-iteration-count:1,infinite;
+    animation-delay:4s,6s;
+    animation-direction:normal,alternate;
+    animation-fill-mode: forwards,none;
+    animation-timing-function: linear,linear;
+}
+#box5 {
+    animation-name: box5,box5down;
+    animation-duration: 1s,2s;
+    animation-iteration-count:1,infinite;
+    animation-delay:5s,6s;
+    animation-direction:normal,alternate;
+    animation-fill-mode: forwards,none;
+    animation-timing-function: linear,linear;
+}
+
 #button-enter {
    @include button--start();
     animation-name: button-enter,button-enter2;

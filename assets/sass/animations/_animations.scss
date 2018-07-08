@@ -7,6 +7,51 @@
     99% {opacity:1;width: 50vw;height:100vh;}
     100% {opacity:0;width:0vw;height:0vh;}
 }
+@-webkit-keyframes box1 {
+    0% {background-color: transparent;border: white;}
+    100% {background-color: $primary;border:transparent;}
+}
+@-webkit-keyframes box2 {
+    0% {background-color: transparent;border: white;}
+    100% {background-color: $primary;border:transparent;}
+}
+@-webkit-keyframes box3 {
+    0% {background-color: transparent;border: white;}
+    100% {background-color: $primary;border:transparent;}
+}
+@-webkit-keyframes box4 {
+     0% {background-color: transparent;border: white;}
+    100% {background-color: $primary;border:transparent;}
+}
+@-webkit-keyframes box5 {
+    0% {background-color: transparent;border: white;}
+    100% {background-color: $primary;border:transparent;}
+}
+@-webkit-keyframes box1down {
+    0% {top:0;}
+    50%{top:-5vh;}
+    100% {top:0;}
+}
+@-webkit-keyframes box2down {
+    0% {top:0;}
+    50%{top:5vh;}
+    100% {top:0;}
+}
+@-webkit-keyframes box3down {
+    0% {top:0;}
+    50%{top:-5vh;}
+    100% {top:0;}
+}
+@-webkit-keyframes box4down {
+    0% {top:0;}
+    50%{top:5vh;}
+    100% {top:0;}
+}
+@-webkit-keyframes box5down {
+    0% {top:0;}
+    50%{top:-5vh;}
+    100% {top:0;}
+}
 @-webkit-keyframes button-enter {
     0% {width:0;}
     100% {opacity:1; width:100%; height: auto;}
