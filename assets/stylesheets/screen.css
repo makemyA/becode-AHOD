@@ -80,6 +80,7 @@ $secondary: rgb(89, 90, 90); */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  position: fixed;
   height: 100vh;
   width: 100vw;
   line-height: 3em;
